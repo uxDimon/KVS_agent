@@ -1,0 +1,23 @@
+extends ../template
+
+block variables
+  - var title = 'Вход1'
+
+block content
+    .main-screen
+        .main-screen__col(style="background-image: url(assets/images/main-screen.jpg)")
+        .main-screen__col
+            h1.title Вход
+            p.text.subtitle Введите номер телефона и получите смс-код для подтверждения.
+            form.main-screen__form.form.ajax-form(enctype="multipart/form-data" method="POST" action autocomplete="on" novalidate="novalidate")
+                ul.fields
+                    li
+                        input.form-control(data-required="yes" type="text" id="phone" value="" data-type="phone" name="phone" required="" data-inputmask-mask="+7 (999) 999-9999" data-mask="+7 (999) 999-9999" data-has-mask="" inputmode="text")
+                        label(for="phone") Телефон
+                        ul.messages
+                            li.error Заполните поле
+                    li
+                        button.btn-orange(type="submit") Получить смс-код
+            .main-screen__btns.main-screen-btns
+                .main-screen-btns__text Нет аккаунта?
+                a.main-screen-btns__orangelink(href="reg1.html") Зарегестрироваться 

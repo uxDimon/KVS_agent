@@ -1,0 +1,13 @@
+extends ../template
+
+block variables
+  - var title = 'Регистрация3'
+
+block content
+    .main-screen
+        .main-screen__col(style="background-image: url(assets/images/main-screen.jpg)")
+        .main-screen__col
+            h1.title Вы успешно<br> зарегистрировались
+            p.text.subtitle Регистрация прошла успешно, необходимо заполнить заявку на аккредитацию, чтобы начать пользоваться Агентским порталом “КВС”
+            .main-screen__btns.main-screen-btns
+                a.btn-orange(href="accreditation.html") Заполнить заявку 

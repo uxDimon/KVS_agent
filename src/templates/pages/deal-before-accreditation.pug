@@ -1,0 +1,12 @@
+extends ../template
+
+block variables
+  - var title = 'Cделки до аккредитации'
+
+block content
+    main.components-container
+        .main-screen__col
+            h1.title Здесь будут отображаться сделки ваших сотрудников
+            p.subtitle Чтобы добавить сотрудников - заполните заявку на аккредитацию и загрузите документы на аккредитацию в личном кабинете.
+            .main-screen__btns.main-screen-btns
+                a.btn-orange(href="accreditation.html") Заполнить заявку на аккредитацию

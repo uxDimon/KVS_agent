@@ -1,0 +1,146 @@
+extends ../template
+
+block variables
+  - var title = 'Аккредитация'
+
+block content
+    main.components-container
+        .stream-wide
+            .section.main-text
+                h1.title Заявка на аккредитацию
+                .markup
+                    p.text Заполните информационную карту и загрузите документы на аккредитацию для дальнейших действий.
+        .stream-narrow
+            .expanding-doc-uploader.expanding-text
+                ul.accreditation__list
+                    li
+                        input(type="checkbox" id="expanding-text-1")
+                        label(for="expanding-text-1") Раскрыть/свернуть текст
+                        h4 Данные организации
+                            span 
+                            label(for="expanding-text-1")
+                                span Раскрыть/свернуть текст
+                        form.form.ajax-form(method="post" enctype="multipart/form-data" name="" action="")
+                            ul.fields.mob-padding
+                                li.field100
+                                    input(id="nameCompany" name="nameCompany" type="text" data-required="yes")
+                                    label(for="nameCompany") Полное название организации
+                                li.field100
+                                    input(id="addressCompany" name="addressCompany" type="text" data-required="yes")
+                                    label(for="addressCompany") Юридический адрес
+                                li.field100
+                                    input(data-required="yes" type="text" id="phoneCompany" value="" data-type="phone" name="phoneCompany" required="" data-inputmask-mask="+7 (999) 999-9999" data-mask="+7 (999) 999-9999" data-has-mask="" inputmode="text")
+                                    label(for="phoneCompany") Телефон организации
+                                li.field100
+                                    input(id="emailCompany" name="emailCompany" type="text" data-required="yes")
+                                    label(for="emailCompany") E-mail
+                                li
+                                    input(id="innCompany" name="innCompany" type="text" data-required="yes")
+                                    label(for="innCompany") ИНН
+                                li
+                                    input(id="kppCompany" name="kppCompany" type="text" data-required="yes")
+                                    label(for="kppCompany") КПП
+                                li.field100
+                                    input(id="faceCompany" name="faceCompany" type="text" data-required="yes")
+                                    label(for="faceCompany") Контактное лицо
+                                li.field100
+                                    input(id="requisitesCompany" name="requisitesCompany" type="text" data-required="yes")
+                                    label(for="requisitesCompany") Банковские реквизиты
+                    li
+                        input(type="checkbox" id="expanding-text-2")
+                        label(for="expanding-text-2") Раскрыть/свернуть текст
+                        h4 Копия свидетельства о государственной регистрации 
+                            span 
+                            label(for="expanding-text-2")
+                                span Раскрыть/свернуть текст
+                        form.form.ajax-form(method="post" enctype="multipart/form-data" name="" action="")
+                            .requirements
+                                h5 Требования к загружаемым файлам паспорта
+                                ul
+                                    li Все развороты паспорта, даже если пустые;
+                                    li Видны края всех разворотов паспорта;
+                                    li Разворот виден полностью;
+                                    li Нет посторонних предметов и бликов;
+                                    li Данные не перекрыты пальцами.
+                            ul.fields
+                                li.not-empty
+                                    input.not-empty(type="file" name="file" id="file_2" multiple="")
+                                    label.area(for="file_2") Загрузить фото
+                    li
+                        input(type="checkbox" id="expanding-text-3")
+                        label(for="expanding-text-3") Раскрыть/свернуть текст
+                        h4 Устав организации
+                            span 
+                            label(for="expanding-text-3")
+                                span Раскрыть/свернуть текст
+                        form.form.ajax-form(method="post" enctype="multipart/form-data" name="" action="")
+                            .requirements
+                                h5 Требования к загружаемым файлам паспорта
+                                ul
+                                    li Все развороты паспорта, даже если пустые;
+                            ul.fields
+                                li.not-empty
+                                    input.not-empty(type="file" name="file" id="file_3" multiple="")
+                                    label.area(for="file_3") Загрузить фото
+                    li
+                        input(type="checkbox" id="expanding-text-4")
+                        label(for="expanding-text-4") Раскрыть/свернуть текст
+                        h4 Декларация НДС за последний отчетный период
+                            span 
+                            label(for="expanding-text-4")
+                                span Раскрыть/свернуть текст
+                        form.form.ajax-form(method="post" enctype="multipart/form-data" name="" action="")
+                            .requirements
+                                h5 Требования к загружаемым файлам паспорта
+                                ul
+                                    li Все развороты паспорта, даже если пустые;
+                            ul.fields
+                                li.not-empty
+                                    input.not-empty(type="file" name="file" id="file_4" multiple="")
+                                    label.area(for="file_4") Загрузить фото
+                    li
+                        input(type="checkbox" id="expanding-text-5")
+                        label(for="expanding-text-5") Раскрыть/свернуть текст
+                        h4 Паспорт директора (первая страница и страница регистрации)
+                            span 
+                            label(for="expanding-text-5")
+                                span Раскрыть/свернуть текст
+                        form.form.ajax-form(method="post" enctype="multipart/form-data" name="" action="")
+                            .requirements
+                                h5 Требования к загружаемым файлам паспорта
+                                ul
+                                    li Все развороты паспорта, даже если пустые;
+                            ul.fields
+                                li.not-empty
+                                    input.not-empty(type="file" name="file" id="file_5" multiple="")
+                                    label.area(for="file_5") Загрузить фото
+                    li
+                        input(type="checkbox" id="expanding-text-6")
+                        label(for="expanding-text-6") Раскрыть/свернуть текст
+                        h4 Договор Агентства недвижимости с КВС
+                            span 
+                            label(for="expanding-text-6")
+                                span Раскрыть/свернуть текст
+                        form.form.ajax-form(method="post" enctype="multipart/form-data" name="" action="")
+                            .requirements
+                                h5 Требования к загружаемым файлам паспорта
+                                ul
+                                    li Все развороты паспорта, даже если пустые;
+                            ul.fields
+                                li.not-empty
+                                    input.not-empty(type="file" name="file" id="file_6" multiple="")
+                                    label.area(for="file_6") Загрузить фото
+        .stream-aside
+            div
+                aside.info.accreditation__aside
+                    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="44" cy="44" r="43" stroke="black" stroke-width="2"/>
+                        <path d="M63.4186 31.6518C63.3689 31.6518 63.3689 31.6021 63.3191 31.5524C63.2694 31.5027 63.2694 31.453 63.2197 31.4033L54.6698 21.8095C54.6201 21.7598 54.5207 21.7101 54.471 21.6604C54.4213 21.6604 54.4213 21.6106 54.3716 21.6106C54.2721 21.5609 54.123 21.5112 53.9739 21.5112H32.9967C29.9148 21.5112 27.3796 24.0464 27.3796 27.1283V61.5766C27.3796 64.6585 29.9148 67.1937 32.9967 67.1937H57.8512C60.9331 67.1937 63.4683 64.6585 63.4683 61.5766V31.9998C63.4683 31.9004 63.4186 31.7513 63.4186 31.6518ZM54.9184 24.8914L60.436 31.105H54.9184V24.8914ZM61.5793 61.5269C61.5793 63.6146 59.9389 65.3047 57.8512 65.3047H32.9967C30.909 65.3047 29.2686 63.6146 29.2686 61.5766V27.0786C29.2686 24.9909 30.9587 23.3505 32.9967 23.3505H53.0294V31.9998C53.0294 32.4969 53.4271 32.9443 53.9739 32.9443H61.5793V61.5269Z" fill="black"/>
+                        <path d="M34.0863 32.9446H42.3877C42.8848 32.9446 43.3322 32.5469 43.3322 32.0001C43.3322 31.4533 42.9345 31.0557 42.3877 31.0557H34.0863C33.5892 31.0557 33.1418 31.4533 33.1418 32.0001C33.1418 32.5469 33.5892 32.9446 34.0863 32.9446Z" fill="black"/>
+                        <path d="M42.3877 55.7605H34.0863C33.5892 55.7605 33.1418 56.1582 33.1418 56.705C33.1418 57.2021 33.5395 57.6495 34.0863 57.6495H42.3877C42.8848 57.6495 43.3322 57.2518 43.3322 56.705C43.3322 56.2079 42.8848 55.7605 42.3877 55.7605Z" fill="black"/>
+                        <path d="M33.1418 38.2628C33.1418 38.7599 33.5395 39.2073 34.0863 39.2073H56.2565C56.7536 39.2073 57.2009 38.8096 57.2009 38.2628C57.2009 37.7657 56.8033 37.3184 56.2565 37.3184H34.0863C33.5892 37.3184 33.1418 37.716 33.1418 38.2628Z" fill="black"/>
+                        <path d="M56.2565 43.0225H34.0863C33.5892 43.0225 33.1418 43.4201 33.1418 43.9669C33.1418 44.464 33.5395 44.9114 34.0863 44.9114H56.2565C56.7536 44.9114 57.2009 44.5137 57.2009 43.9669C57.2009 43.4201 56.8033 43.0225 56.2565 43.0225Z" fill="black"/>
+                        <path d="M56.2565 48.8888H34.0863C33.5892 48.8888 33.1418 49.2864 33.1418 49.8332C33.1418 50.3303 33.5395 50.7777 34.0863 50.7777H56.2565C56.7536 50.7777 57.2009 50.38 57.2009 49.8332C57.2009 49.2864 56.8033 48.8888 56.2565 48.8888Z" fill="black"/>
+                    </svg>
+                    h3 Презентация 2020
+                    a.note(href="#" download="") Скачать презентацию

@@ -1,0 +1,74 @@
+extends ../template
+
+block variables
+  - var title = 'Новости'
+
+block content
+    main.components-container
+        .stream-wide
+            section.header-with-caption
+                h1 Новости
+                p.subtitle В данном разделе отображаются новости и мероприятия «КВС».
+        .stream-wide
+            section.news
+                <div class="filters" style="display:none">
+                    <ul>
+                        <li><input type="radio" name="news" id="all-news" checked=""><label for="all-news">Все</label></li>
+                        <li><input type="radio" name="news" id="complexes"><label for="complexes">Жилые комплексы</label></li>
+                        <li><input type="radio" name="news" id="online"><label for="online">Онлайн</label></li>
+                        <li><input type="radio" name="news" id="mortgage"><label for="mortgage">Ипотека</label></li>
+                        <li><input type="radio" name="news" id="owners"><label for="owners">Дольщикам</label></li>
+                        <li><input type="radio" name="news" id="company"><label for="company">Компания</label></li>
+                        <li><input type="radio" name="news" id="about_us"><label for="about_us">Пресса о&nbsp;нас</label></li>
+                    </ul>
+                </div>
+                <ul class="mini-cards">
+                    <li class="promo news-item">
+                        <a href="#">
+                            <img src="assets/images/jj.svg">
+                            <h3>Не пропустите прямой эфир о ЖК «Любоград»</h3>
+                            <div>
+                                <span>13 Января 2021</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news-item">
+                        <a href="#">
+                            <img src="assets/images/jj.svg">
+                            <h3>Сданы еще четыре дома в ЖК «Ясно.Янино»!</h3>
+                            <div>
+                                <span>31 Декабря 2020</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news-item">
+                        <a href="#">
+                            <img src="assets/images/jj.svg">
+                            <h3>Старт продаж: кладовые в квартале «Имение»!</h3>
+                            <div>
+                                <span>30 Декабря 2020</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news-item">
+                        <a href="#">
+                            <img src="assets/images/jj.svg">
+                            <h3>Поздравляем с Новым годом и ждем вас в январе!</h3>
+                            <div>
+                                <span>30 Декабря 2020</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news-item">
+                        <a href="#">
+                            <img src="assets/images/jj.svg">
+                            <h3>Открыта аренда паркингов во второй очереди ЖК «Кирилл и Дарья»</h3>
+                            <div>
+                                <span>29 Декабря 2020</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="load-more">
+                        <button type="button">Показать ещё</button>
+                    </li>
+                </ul>

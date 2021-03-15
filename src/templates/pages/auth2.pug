@@ -1,0 +1,23 @@
+extends ../template
+
+block variables
+  - var title = 'Вход2'
+
+block content
+    .main-screen
+        .main-screen__col(style="background-image: url(assets/images/main-screen.jpg)")
+        .main-screen__col
+            h1.title Вход
+            p.text.subtitle Введите смс-код высланный на ваш номер телефона.
+            form.main-screen__form.form.ajax-form(enctype="multipart/form-data" method="POST" action autocomplete="on" novalidate="novalidate")
+                ul.fields
+                    li
+                        input.form-control(data-required="yes" type="text" id="sms" value="" name="sms" required="")
+                        label(for="sms") Смс-код
+                        ul.messages
+                            li.error Заполните поле
+                    li
+                        button.btn-orange(type="submit") Войти
+            .main-screen__btns.main-screen-btns
+                .main-screen-btns__text Не получили код?
+                a.main-screen-btns__orangelink(href="#") Прислать код еще раз 

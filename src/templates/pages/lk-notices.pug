@@ -1,0 +1,40 @@
+extends ../template
+
+block variables
+  - var title = 'ЛК Уведомления'
+
+block content
+    main.components-container.notices
+        .stream-wide
+            section.header-with-caption
+                h1 Личный кабинет
+                p.subtitle В этом разделе отображается вся информация о вашем агентстве.
+                .submenu
+                    ul
+                        li
+                            a(href="lk-data.html") Личные данные
+                        li
+                            a(href="lk-staff.html") Сотрудники
+                        li
+                            a.current(href="lk-notices.html") Уведомления
+                        li
+                            a(href="lk-events.html") Календарь мероприятий
+        .stream-narrow
+            ul.notices__list
+                li.notices__item.notices-item
+                    span.notices-item__info 12.12.2020
+                    span.notices-item__info 11:34
+                    p.notices-item__text Статус по броне № 123456 изменен, договор ипотечного кредитования был рассмотрен и одобрен. Сделка ожидает дальнейшей подгрузки документов.
+                li.notices__item.notices-item
+                    span.notices-item__info 12.12.2020
+                    span.notices-item__info 11:34
+                    p.notices-item__text Статус по броне № 123456 изменен, договор ипотечного кредитования был рассмотрен и одобрен. Сделка ожидает дальнейшей подгрузки документов.
+                li.notices__item.notices-item
+                    span.notices-item__info 12.12.2020
+                    span.notices-item__info 11:34
+                    p.notices-item__text Статус по броне № 123456 изменен, договор ипотечного кредитования был рассмотрен и одобрен. Сделка ожидает дальнейшей подгрузки документов.
+                li.notices__item.notices-item
+                    span.notices-item__info 12.12.2020
+                    span.notices-item__info 11:34
+                    p.notices-item__text Статус по броне № 123456 изменен, договор ипотечного кредитования был рассмотрен и одобрен. Сделка ожидает дальнейшей подгрузки документов.
+

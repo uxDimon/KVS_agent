@@ -1,0 +1,368 @@
+extends ../template
+
+block variables
+  - var title = 'Главная страница Агента'
+
+block content
+    main.components-container
+        .stream-narrow
+            section.header-with-caption
+                h1 Агентский портал
+                p.subtitle.subtitle-padding Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+
+        .stream-wide.agents__fix.agents-fix
+            h2.title Зафиксировать клиента
+            form.form.ajax-form(enctype="multipart/form-data" method="POST" action autocomplete="on" novalidate="novalidate")
+                ul.fields
+                    li.half-size
+                        input.form-control(data-required="yes" type="text" id="fio" value="" name="fio" required="")
+                        label(for="fio") ФИО 
+                        ul.messages
+                            li.error Заполните поле
+                    li.half-size
+                        input.form-control(data-required="yes" type="text" id="birthDate" value="" name="birthDate" required="")
+                        label(for="birthDate") Дата рождения
+                        ul.messages
+                            li.error Заполните поле
+                    li.half-size
+                        input.form-control(data-required="yes" type="text" id="phone" value="" data-type="phone" name="phone" required="" data-inputmask-mask="+7 (999) 999-9999" data-mask="+7 (999) 999-9999" data-has-mask="" inputmode="text")
+                        label(for="phone") Телефон
+                        ul.messages
+                            li.error Заполните поле
+                    li.half-size
+                        input.form-control(data-required="yes" type="text" id="city" value="" name="city" required="")
+                        label(for="city") Город
+                        ul.messages
+                            li.error Заполните поле
+                    li
+                        button.btn-orange(type="submit") Отправить заявку 
+        .stream-wide 
+            h2.title Объекты
+            section.slider-promo
+                <form class="chooser-form" id="chooser-form" name="_form" action="/search/" method="get">
+                    <ul class="fields">
+                        <li class="checkboxes" data-for="rooms">
+                            <ul class="row">
+                                <li>
+                                    <input type="checkbox" name="arrFilter_47_4108050209" id="arrFilter_47_4108050209" value="Y">
+                                    <label for="arrFilter_47_4108050209">Ст</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="arrFilter_47_2212294583" id="arrFilter_47_2212294583" value="Y">
+                                    <label for="arrFilter_47_2212294583">1к</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="arrFilter_47_450215437" id="arrFilter_47_450215437" value="Y">
+                                    <label for="arrFilter_47_450215437">2к</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="arrFilter_47_1842515611" id="arrFilter_47_1842515611" value="Y">
+                                    <label for="arrFilter_47_1842515611">3к</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-for="price">
+                            <div class="range" data-name="PRICE" data-format="price" data-min="2661736" data-max="20977550">
+                                <label>Цена (руб.)</label>
+                                <ul class="inputs" data-min-range="0" data-step="1" data-decimal-places="0">
+                                    <li>
+                                        <span class="label">от</span>
+                                        <span class="input">
+                                            <input class="user-min" type="text" name="arrFilter_53_MIN" id="arrFilter_53_MIN_HIDDEN" value="2661736" style="width: 84px;">
+                                            <span class="focus-out min">2661736</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="label">до</span>
+                                        <span class="input">
+                                            <input class="user-max" type="text" name="arrFilter_53_MAX" id="arrFilter_53_MAX_HIDDEN" value="20977550" style="width: 84px;">
+                                            <span class="focus-out max">20977550</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <div class="controls">
+                                    <button class="min" type="button" style="left: 34.2682px;"></button>
+                                    <button class="max" type="button" style="left: 220.621px;"></button>
+                                    <span class="range" style="right: 16.4314%; left: 12.9804%;"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="checkboxes" data-for="deadline">
+                            <input class="multiselect" type="checkbox" name="DEAD_LINE" id="DEAD_LINE98">
+                            <div class="multiselect">
+                                <label for="DEAD_LINE98">Срок сдачи</label>
+                                <label class="multiselect" for="DEAD_LINE98">
+                                    <span class="value" data-empty="Любой"></span>
+                                    <span class="plus"></span>
+                                </label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_300230734" id="arrFilter_98_300230734" value="Y" class="option">
+                                        <label for="arrFilter_98_300230734">Дом сдан</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_3980580551" id="arrFilter_98_3980580551" value="Y" class="option">
+                                        <label for="arrFilter_98_3980580551">IV кв. 2020 г.</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_1182655999" id="arrFilter_98_1182655999" value="Y" class="option">
+                                        <label for="arrFilter_98_1182655999">III кв. 2021 г.</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_2493410915" id="arrFilter_98_2493410915" value="Y" class="option">
+                                        <label for="arrFilter_98_2493410915">IV кв. 2021 г.</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_2041659290" id="arrFilter_98_2041659290" value="Y" class="option">
+                                        <label for="arrFilter_98_2041659290">III кв. 2022 г.</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_281082452" id="arrFilter_98_281082452" value="Y" class="option">
+                                        <label for="arrFilter_98_281082452">III кв. 2023 г.</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_591242005" id="arrFilter_98_591242005" value="Y" class="option">
+                                        <label for="arrFilter_98_591242005">IV кв. 2022 г.</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="checkboxes" data-for="advantages">
+                            <label for="advantages">Дополнительно</label>
+                            <input class="toggle" type="checkbox" name="arrFilter_115_2367533627" id="arrFilter_115_2367533627" value="Y">
+                            <label class="toggle" for="arrFilter_115_2367533627">Отделка</label>
+                        </li>
+                        <li class="submit">
+                            <button type="submit">Найти квартиру</button>
+                        </li>
+                    </ul>
+                </form>
+
+            section.complex-list
+                <ul>
+                    <li class="map-marker" data-latitude="59.875321" data-longitude="30.33429" data-for="map-complexes-list-1" data-markup="<img src=&quot;/upload/iblock/279/b57.jpg&quot; srcset=&quot;/upload/iblock/bf7/b57_2x.jpg 2x&quot; alt=&quot;Клубный дом Б57&quot;><div><h2>Клубный дом Б57</h2><address>Благодатная ул., д. 57</address></div><a href=&quot;#&quot;>Подробнее об офисе</a>" data-id="1114">
+                        <a href="/obekty/zhk-b57/">
+                            <div class="image">
+                                <span>Эскроу счет</span>
+                                <img src="/assets/images/b57.jpg" alt="Клубный дом Б57">
+                            </div>
+                            <div class="info">
+                                <div>
+                                    <h3>Клубный дом Б57</h3>
+                                    <p>
+                                        <span class="metro"><span style="background: #7f98ca"></span> Парк победы</span>
+                                        <span class="metro"><span style="background: #7f98ca"></span> Электросила</span>
+                                        <span>Благодатная ул., д. 57</span>
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li class="title">срок сдачи</li>
+                                    <li>IV  кв. 2021 г.</li>
+                                </ul>
+                                <p>
+                                    <span class="title">квартиры</span>
+                                    <span>от 9,03 млн. ₽</span>
+                                </p>
+                                <img src="/assets/images/Б57 112х86-06.svg" alt="Клубный дом Б57">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="map-marker" data-latitude="59.855121" data-longitude="30.152208" data-for="map-complexes-list-1" data-markup="<img src=&quot;/upload/iblock/4b6/nautilus.jpg&quot; srcset=&quot;/upload/iblock/4b6/nautilus.jpg 2x&quot; alt=&quot;ЖК «Наутилус»&quot;><div><h2>ЖК «Наутилус»</h2><address>ул. Адмирала Трибуца / наб. Матисова канала</address></div><a href=&quot;#&quot;>Подробнее об офисе</a>" data-id="642">
+                        <a href="/obekty/zhk-nautilus/">
+                            <div class="image">
+                                <img src="/assets/images/nautilus.jpg" alt="ЖК «Наутилус»">
+                            </div>
+                            <div class="info">
+                                <div>
+                                    <h3>ЖК «Наутилус»</h3>
+                                    <p>
+                                        <span class="metro"><span style="background: #c26868"></span> Ленинский пр.</span>
+                                        <span>ул. Адмирала Трибуца / наб. Матисова канала</span>
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li class="title">срок сдачи</li>
+                                    <li>Сдан</li>
+                                </ul>
+                                <p>
+                                    <span class="title">квартиры</span>
+                                    <span>от 5,50 млн. ₽</span>
+                                </p>
+                                <img src="/assets/images/Наутилус 112х86-04.svg" alt="ЖК «Наутилус»">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="map-marker" data-latitude="60.068437" data-longitude="30.313319" data-for="map-complexes-list-1" data-markup="<img src=&quot;/upload/iblock/605/kontinenty.jpg&quot; srcset=&quot;/upload/iblock/605/kontinenty.jpg 2x&quot; alt=&quot;ЖК «Континенты»&quot;><div><h2>ЖК «Континенты»</h2><address>ул. Брюлловская / ул. Архитектора Белова</address></div><a href=&quot;#&quot;>Подробнее об офисе</a>" data-id="723">
+                        <a href="/obekty/zhk-kontinenty/">
+                            <div class="image">
+                                <img src="/assets/images/kontinenty.jpg" alt="ЖК «Континенты»">
+                            </div>
+                            <div class="info">
+                                <div>
+                                    <h3>ЖК «Континенты»</h3>
+                                    <p>
+                                        <span class="metro">
+                                        <span style="background: #7f98ca"></span> Парнас</span>
+                                        <span>ул. Брюлловская / ул. Архитектора Белова</span>
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li class="title">срок сдачи</li>
+                                    <li>III кв. 2021 г.</li>
+                                    <li>III кв. 2022 г.</li>
+                                    <li>III кв. 2023 г.</li>
+                                </ul>
+                                <p>
+                                    <span class="title">квартиры</span>
+                                    <span>от 3,15 млн. ₽</span>
+                                </p>
+                                <img src="/assets/images/Континенты 112х86-03.svg" alt="ЖК «Континенты»">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="map-marker" data-latitude="59.959201736094" data-longitude="30.599320984131" data-for="map-complexes-list-1" data-markup="<img src=&quot;/local/img/Janino.jpg&quot; srcset=&quot;/upload/resize_cache/iblock/d0a/624_342_1ef5d4215e1992bd365364f1850e5edce/Янино 624х342_mini.jpg 2x&quot; alt=&quot;ЖК «Ясно.Янино»&quot;><div><h2>ЖК «Ясно.Янино»</h2><address>Всеволожский район, ул. Ясная</address></div><a href=&quot;#&quot;>Подробнее об офисе</a>" data-id="22">
+                        <a href="/obekty/ja_ja_yasno_yanino/">
+                            <div class="image">
+                                <span>Эскроу счет</span>
+                                <img src="/assets/images/Janino.jpg" alt="ЖК «Ясно.Янино»">
+                            </div>
+                            <div class="info">
+                                <div>
+                                    <h3>ЖК «Ясно.Янино»</h3>
+                                    <p>
+                                        <span class="metro"><span style="background: #c88a42"></span> Ладожская</span>
+                                        <span class="metro"><span style="background: #c88a42"></span> Пр.Большевиков</span>
+                                        <span>Всеволожский район, ул. Ясная</span>
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li class="title">срок сдачи</li>
+                                    <li>IV кв. 2020 г.</li>
+                                    <li>IV кв. 2021 г.</li>
+                                    <li>III кв. 2022 г.</li>
+                                    <li>IV кв. 2022 г.</li>
+                                    <li>IV кв. 2023 г.</li>
+                                </ul>
+                                <p>
+                                    <span class="title">квартиры</span>
+                                    <span>от 2,66 млн. ₽</span>
+                                </p>
+                                <img src="/assets/images/Янино 112х86-01.svg" alt="ЖК «Ясно.Янино»">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="map-marker" data-latitude="59.957634" data-longitude="30.597678" data-for="map-complexes-list-1" data-markup="<img src=&quot;/local/img/4kvartal.jpg&quot; srcset=&quot;/upload/resize_cache/iblock/332/430_415_1ef5d4215e1992bd365364f1850e5edce/Group 4309@2x.png 2x&quot; alt=&quot;ЖК «Ясно. Янино» - «Квартал 4»&quot;><div><h2>ЖК «Ясно. Янино» - «Квартал 4»</h2><address>Всеволожский район, ул. Ясная</address></div><a href=&quot;#&quot;>Подробнее об офисе</a>" data-id="2327">
+                        <a href="/obekty/ja_ja_yasno_yanino/kvartal-4/">
+                            <div class="image">
+                                <span>Эскроу счет</span>
+                                <img src="/assets/images/4kvartal.jpg" alt="ЖК «Ясно. Янино» - «Квартал 4»">
+                            </div>
+                            <div class="info">
+                                <div>
+                                    <h3>ЖК «Ясно. Янино» - «Квартал 4»</h3>
+                                    <p>
+                                        <span class="metro"><span style="background: #c88a42"></span> Ладожская</span>
+                                        <span class="metro"><span style="background: #c88a42"></span> Пр.Большевиков</span>
+                                        <span>Всеволожский район, ул. Ясная</span>
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li class="title">срок сдачи</li>
+                                    <li>III кв. 2022 г.</li>
+                                    <li>IV кв. 2021 г.</li>
+                                </ul>
+                                <p>
+                                    <span class="title">квартиры</span>
+                                    <span>от 2,90 млн. ₽</span>
+                                </p>
+                                <img src="/assets/images/Янино 112х86-01.svg" alt="ЖК «Ясно. Янино» - «Квартал 4»">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="map-marker" data-latitude="59.957903" data-longitude="30.598641" data-for="map-complexes-list-1" data-markup="<img src=&quot;/local/img/5kvartal.jpg&quot; srcset=&quot;/upload/resize_cache/iblock/e11/1248_684_1ef5d4215e1992bd365364f1850e5edce/5kvartal.jpg 2x&quot; alt=&quot;ЖК «Ясно. Янино» - «Квартал 5»&quot;><div><h2>ЖК «Ясно. Янино» - «Квартал 5»</h2><address>Всеволожский район, ул. Ясная</address></div><a href=&quot;#&quot;>Подробнее об офисе</a>" data-id="4230">
+                        <a href="/obekty/ja_ja_yasno_yanino/kvartal-5/">
+                            <div class="image">
+                                <span>Эскроу счет</span>
+                                <img src="/assets/images/5kvartal.jpg" alt="ЖК «Ясно. Янино» - «Квартал 5»">
+                            </div>
+                            <div class="info">
+                                <div>
+                                    <h3>ЖК «Ясно. Янино» - «Квартал 5»</h3>
+                                    <p>
+                                        <span class="metro"><span style="background: #c88a42"></span> Ладожская</span>
+                                        <span class="metro"><span style="background: #c88a42"></span> Пр.Большевиков</span>
+                                        <span>Всеволожский район, ул. Ясная</span>
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li class="title">срок сдачи</li>
+                                    <li>IV кв. 2022 г.</li>
+                                    <li>IV кв. 2023 г.</li>
+                                </ul>
+                                <p>
+                                    <span class="title">квартиры</span>
+                                    <span>от 2,66 млн. ₽</span>
+                                </p>
+                                <img src="/assets/images/Янино 112х86-01.svg" alt="ЖК «Ясно. Янино» - «Квартал 5»">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="map-marker" data-latitude="60.165159" data-longitude="30.187972" data-for="map-complexes-list-1" data-markup="<img src=&quot;/upload/iblock/500/NSertolovo.jpg&quot; srcset=&quot;/upload/iblock/500/NSertolovo.jpg 2x&quot; alt=&quot;ЖК «Новое Сертолово»&quot;><div><h2>ЖК «Новое Сертолово»</h2><address>Всеволожский район, ул. Тихвинская</address></div><a href=&quot;#&quot;>Подробнее об офисе</a>" data-id="8">
+                        <a href="/obekty/sertolovo/">
+                            <div class="image">
+                                <span>Эскроу счет</span>
+                                <img src="/assets/images/NSertolovo.jpg" alt="ЖК «Новое Сертолово»">
+                            </div>
+                            <div class="info">
+                                <div>
+                                    <h3>ЖК «Новое Сертолово»</h3>
+                                    <p>
+                                        <span class="metro"><span style="background: #7f98ca"></span> Озерки</span>
+                                        <span class="metro"><span style="background: #7f98ca"></span> Пр.Просвещения</span>
+                                        <span>Всеволожский район, ул. Тихвинская</span>
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li class="title">срок сдачи</li>
+                                    <li>III кв. 2020 г.</li>
+                                    <li>IV кв. 2021 г.</li>
+                                </ul>
+                                <p>
+                                    <span class="title">квартиры</span>
+                                    <span>от 2,84 млн. ₽</span>
+                                </p>
+                                <img src="/assets/images/Сертолово 112х86-02.svg" alt="ЖК «Новое Сертолово»">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="map-marker" data-latitude="60.164474" data-longitude="30.188782" data-for="map-complexes-list-1" data-markup="<img src=&quot;/upload/iblock/351/atmosfera-main-img.jpg&quot; srcset=&quot;/upload/iblock/351/atmosfera-main-img.jpg 2x&quot; alt=&quot;ЖК «Новое Сертолово» Квартал «Атмосфера»&quot;><div><h2>ЖК «Новое Сертолово» Квартал «Атмосфера»</h2><address>Всеволожский район, ул. Тихвинская</address></div><a href=&quot;#&quot;>Подробнее об офисе</a>" data-id="4263"> 
+                        <a href="/obekty/sertolovo/kvartal-atmosfera/">
+                            <div class="image">
+                                <span>Эскроу счет</span>
+                                <img src="/assets/images/atmosfera-main-img.jpg" alt="ЖК «Новое Сертолово» Квартал «Атмосфера»">
+                            </div>
+                            <div class="info">
+                                <div>
+                                    <h3>ЖК «Новое Сертолово» Квартал «Атмосфера»</h3>
+                                    <p>
+                                        <span class="metro"><span style="background: #7f98ca"></span> Озерки</span>
+                                        <span class="metro"><span style="background: #7f98ca"></span> Пр.Просвещения</span>
+                                        <span>Всеволожский район, ул. Тихвинская</span>
+                                    </p>
+                                </div>
+                                <ul>
+                                    <li class="title">срок сдачи</li>
+                                    <li>III кв. 2020 г.</li>
+                                    <li>IV кв. 2021 г.</li>
+                                </ul>
+                                <p>
+                                    <span class="title">квартиры</span>
+                                    <span>от 2,84 млн. ₽</span>
+                                </p>
+                                <img src="/assets/images/Сертолово 112х86-02.svg" alt="ЖК «Новое Сертолово» Квартал «Атмосфера»">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="additional">
+                    </li>
+                </ul>                

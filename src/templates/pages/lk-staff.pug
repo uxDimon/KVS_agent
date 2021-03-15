@@ -1,0 +1,102 @@
+extends ../template
+
+block variables
+  - var title = 'ЛК Сотрудники'
+
+block content
+    main.components-container
+        .stream-wide
+            section.header-with-caption
+                h1 Личный кабинет
+                p.subtitle В этом разделе отображается вся информация о вашем агентстве.
+                .submenu
+                    ul
+                        li
+                            a(href="lk-data.html") Личные данные
+                        li
+                            a.current(href="lk-staff.html") Сотрудники
+                        li
+                            a(href="lk-notices.html") Уведомления
+                        li
+                            a(href="lk-events.html") Календарь мероприятий
+        .stream-wide
+            section.main-text
+                h2.title Сотрудники
+            a.agents__add.agents-add(href="#")
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="25" fill="#F4691B"/>
+                    <path d="M17.7 25.192V22.888H24.36V16.12H26.88V22.888H33.54V25.192H26.88V31.96H24.36V25.192H17.7Z" fill="white"/>
+                </svg>
+                | Добавить сотрудника
+            form.agents__filterstaff.form.ajax-form(enctype="multipart/form-data" method="POST" action autocomplete="on" novalidate="novalidate")
+                ul.fields
+                    li
+                        input.form-control(data-required="yes" type="text" id="nameAgent" value="" name="nameAgent" required="")
+                        label(for="nameAgent") Имя агента
+                    li
+                        input.form-control(data-required="yes" type="text" id="statusAgent" value="" name="statusAgent" required="")
+                        label(for="statusAgent") Статус агента
+            .agents-stafflist__wrapwrap
+                .agents-stafflist__wrap
+                    ul.agents__stafflist.agents-stafflist
+                        li.agents-stafflist__row.agents-stafflist__row--header
+                            .agents-stafflist__col Имя сотрудника
+                            .agents-stafflist__col Статус сотрудника
+                            .agents-stafflist__col Телефон
+                            .agents-stafflist__col E-mail
+                            .agents-stafflist__col 
+                        li.agents-stafflist__row
+                            .agents-stafflist__col Константин Константинович Константинопольский
+                            .agents-stafflist__col Принят
+                            .agents-stafflist__col +7 921 111 33 55
+                            .agents-stafflist__col example@mail.ru
+                            .agents-stafflist__col 
+                                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="circle-wrap" cx="17.5" cy="17.5" r="17.5" fill="#E3E3E3"/>
+                                    <circle cx="17.5" cy="9.5" r="2.5" fill="#575757"/>
+                                    <circle cx="17.5" cy="17.5" r="2.5" fill="#575757"/>
+                                    <circle cx="17.5" cy="25.5" r="2.5" fill="#575757"/>
+                                </svg>
+                        li.agents-stafflist__row
+                            .agents-stafflist__col Константин Константинович Константинопольский
+                            .agents-stafflist__col Принят в другое место
+                            .agents-stafflist__col +7 921 111 33 55
+                            .agents-stafflist__col example@mail.ru
+                            .agents-stafflist__col 
+                                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="circle-wrap" cx="17.5" cy="17.5" r="17.5" fill="#E3E3E3"/>
+                                    <circle cx="17.5" cy="9.5" r="2.5" fill="#575757"/>
+                                    <circle cx="17.5" cy="17.5" r="2.5" fill="#575757"/>
+                                    <circle cx="17.5" cy="25.5" r="2.5" fill="#575757"/>
+                                </svg>
+                        li.agents-stafflist__row
+                            .agents-stafflist__col Константин Константинович Константинопольский
+                            .agents-stafflist__col Отказ
+                            .agents-stafflist__col +7 921 111 33 55
+                            .agents-stafflist__col example@mail.ru
+                            .agents-stafflist__col 
+                                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle class="circle-wrap" cx="17.5" cy="17.5" r="17.5" fill="#E3E3E3"/>
+                                    <circle cx="17.5" cy="9.5" r="2.5" fill="#575757"/>
+                                    <circle cx="17.5" cy="17.5" r="2.5" fill="#575757"/>
+                                    <circle cx="17.5" cy="25.5" r="2.5" fill="#575757"/>
+                                </svg>
+                .agents-stafflist__info.agents-stafflist-info
+                    a.agents-stafflist-info__item(href="#")
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" id="1">
+                            <path d="M0 10.292V13H2.70796L10.6946 5.01333L7.98667 2.30537L0 10.292ZM12.7888 2.91918C13.0704 2.63755 13.0704 2.18261 12.7888 1.90099L11.099 0.211221C10.8174 -0.0704069 10.3624 -0.0704069 10.0808 0.211221L8.75934 1.5327L11.4673 4.24066L12.7888 2.91918Z" fill="#515151"/>
+                        </svg>
+                        | Редактировать  агента
+                    a.agents-stafflist-info__item(href="#")
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.24774 4.14842C1.41219 4.26447 1.9079 4.60912 2.73489 5.1822C3.56191 5.75527 4.19546 6.19653 4.63557 6.50599C4.68393 6.53991 4.78665 6.61365 4.94381 6.7273C5.10099 6.84103 5.23159 6.93294 5.33552 7.00304C5.43952 7.07312 5.56524 7.15174 5.71282 7.23876C5.86034 7.32571 5.99941 7.39112 6.12999 7.43441C6.26059 7.47807 6.38149 7.49969 6.4927 7.49969H6.49999H6.50731C6.61853 7.49969 6.73948 7.47804 6.87008 7.43441C7.00061 7.39112 7.1398 7.32564 7.2872 7.23876C7.43467 7.15163 7.5604 7.07309 7.66439 7.00304C7.76839 6.93294 7.8989 6.84103 8.05613 6.7273C8.21326 6.61354 8.31611 6.53991 8.36447 6.50599C8.80933 6.19653 9.94113 5.4106 11.7595 4.14827C12.1125 3.90173 12.4075 3.60424 12.6444 3.256C12.8816 2.90792 13 2.54277 13 2.16074C13 1.8415 12.8851 1.56823 12.6553 1.34094C12.4256 1.1136 12.1535 1 11.8392 1H1.16067C0.788294 1 0.501729 1.12572 0.301022 1.37717C0.100341 1.62867 0 1.94304 0 2.32023C0 2.62492 0.133042 2.95508 0.399 3.31053C0.664932 3.66601 0.94794 3.94533 1.24774 4.14842Z" fill="#515151"/>
+                            <path d="M12.2744 4.92449C10.6883 5.99805 9.48391 6.83238 8.66185 7.42731C8.38618 7.63036 8.16256 7.78886 7.99082 7.90244C7.81908 8.0161 7.59067 8.13216 7.30528 8.2506C7.01999 8.36921 6.7541 8.42833 6.50741 8.42833H6.50001H6.49272C6.24607 8.42833 5.98004 8.36921 5.69475 8.2506C5.40945 8.13216 5.1809 8.0161 5.00921 7.90244C4.83757 7.78886 4.61387 7.63036 4.33823 7.42731C3.68529 6.94855 2.48349 6.11417 0.732774 4.92449C0.457034 4.74083 0.212802 4.53031 0 4.29337V10.0533C0 10.3726 0.113604 10.6458 0.34094 10.8731C0.568224 11.1005 0.841525 11.2141 1.16074 11.2141H11.8393C12.1585 11.2141 12.4318 11.1005 12.6591 10.8731C12.8864 10.6457 13 10.3727 13 10.0533V4.29337C12.792 4.52541 12.5503 4.73592 12.2744 4.92449Z" fill="#515151"/>
+                        </svg>
+                        | Пригласить повторно
+                    a.agents-stafflist-info__item(href="#")
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.41754 0.784729H7.59023V1.15031H8.37486V0.733551C8.37495 0.329086 8.04607 0 7.6418 0H5.36597C4.9617 0 4.63281 0.329086 4.63281 0.733551V1.15031H5.41754V0.784729Z" fill="#515151"/>
+                            <path d="M10.1863 4.25928H2.82022C2.61838 4.25928 2.45949 4.43146 2.47576 4.6327L3.09158 12.2475C3.12589 12.6726 3.48047 13 3.90646 13H9.09993C9.52592 13 9.8805 12.6726 9.91481 12.2474L10.5306 4.6327C10.547 4.43146 10.3881 4.25928 10.1863 4.25928ZM4.60381 12.1878C4.59558 12.1883 4.58734 12.1886 4.57921 12.1886C4.37351 12.1886 4.20083 12.0284 4.18804 11.8203L3.80212 5.56898C3.78883 5.35266 3.95337 5.1665 4.16959 5.15321C4.38511 5.14011 4.57207 5.30426 4.58536 5.52068L4.97118 11.772C4.98457 11.9883 4.82002 12.1744 4.60381 12.1878ZM6.89997 11.7962C6.89997 12.0128 6.72432 12.1885 6.50761 12.1885C6.2909 12.1885 6.11524 12.0128 6.11524 11.7962V5.54478C6.11524 5.32806 6.2909 5.15241 6.50761 5.15241C6.72422 5.15241 6.89997 5.32806 6.89997 5.54478V11.7962ZM9.20437 5.56789L8.83591 11.8192C8.82371 12.0277 8.65074 12.1885 8.44464 12.1885C8.4369 12.1885 8.42906 12.1883 8.42123 12.1879C8.20491 12.1751 8.03987 11.9894 8.05267 11.7731L8.42103 5.52167C8.43373 5.30535 8.6188 5.14031 8.83571 5.15311C9.05203 5.1658 9.21707 5.35157 9.20437 5.56789Z" fill="#515151"/>
+                            <path d="M11.5438 3.04846L11.2861 2.27603C11.2182 2.07241 11.0276 1.93504 10.8128 1.93504H2.19499C1.98036 1.93504 1.78963 2.07241 1.72179 2.27603L1.46411 3.04846C1.41442 3.19743 1.47909 3.34938 1.59979 3.42516C1.64899 3.456 1.70721 3.47455 1.77118 3.47455H11.2367C11.3007 3.47455 11.359 3.456 11.4081 3.42506C11.5288 3.34928 11.5935 3.19733 11.5438 3.04846Z" fill="#515151"/>
+                        </svg>
+                        | Удалить агента

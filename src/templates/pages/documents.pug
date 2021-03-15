@@ -1,0 +1,103 @@
+extends ../template
+
+block variables
+  - var title = 'Документы'
+
+block content
+    main.components-container
+        .stream-wide
+            section.header-with-caption
+                h1 Документы
+        .stream-narrow
+            section.documents(data-id="1")
+                <form class="ajax-form">
+                    <ul class="fields">
+                        <li class="radios"><input class="select" type="checkbox" name="documents-1" id="documents-1">
+                            <div class="select"><label for="documents-1"></label><label class="select" for="documents-1"><span class="value">Все документы</span></label>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="documents-1[]" id="documents-1[all]" value="all" checked="" class="option">
+                                        <label for="documents-1[all]">Все документы</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="documents-1[]" id="documents-1[0]" value="0" class="option">
+                                        <label for="documents-1[0]">Общие документы</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="documents-1[]" id="documents-1[domrf]" value="domrf" class="option">
+                                        <label for="documents-1[domrf]">НашДом.РФ</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+                <ul class="documents-list">
+                    <li class="current" data-for="documents-1[0]">
+                        <h3>Общие документы</h3>
+                        <ul>
+                            <li>
+                                <h4>Документы по объекту</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank" data-id="65449" rel="nofollow, noindex">
+                                            <h5>Положительное заключение экспертизы № 78-2-1-2-0053-18 от 29.12.2018</h5>
+                                            <p>
+                                                <span>PDF,&nbsp;6.2 МБ</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank" data-id="65452" rel="nofollow, noindex">
+                                            <h5>Выписка ЕГРН (аренда земельного участка)</h5>
+                                            <p>
+                                                <span>PDF,&nbsp;1.39 МБ</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Проектная декларация и изменения к ней</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank" data-id="103336" rel="nofollow, noindex">
+                                            <h5>Проектная декларация Жилой комплекс «Клубный дом Б57» п.19.7</h5>
+                                            <p>
+                                                <span>PDF,&nbsp;189.66 КБ</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Форма договора участия в долевом строительстве</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank" data-id="65455" rel="nofollow, noindex">
+                                            <h5>Проект договора участия в долевом строительстве</h5>
+                                            <p>
+                                                <span>PDF,&nbsp;236.42 КБ</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="current" data-for="documents-1[domrf]">
+                        <h3>НашДом.РФ</h3>
+                        <ul>
+                            <li>
+                                <h4>Информация об объектах строительства на НашДом.РФ</h4>
+                                <ul>
+                                    <li>
+                                        <a target="_blank" href="#">
+                                            <h5>Клубный дом Б57</h5>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>

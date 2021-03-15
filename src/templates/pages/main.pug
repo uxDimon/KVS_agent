@@ -1,0 +1,14 @@
+extends ../template
+
+block variables
+  - var title = 'Главная'
+
+block content
+    .main-screen
+        .main-screen__col(style="background-image: url(assets/images/main-screen.jpg)")
+        .main-screen__col
+            h1.title Добро пожаловать<br> на Агентский портал «КВС»
+            p.text.subtitle Зарегистрируйтесь или войдите в свою учетную запись, чтобы начать пользоваться функционалом портала
+            .main-screen__btns.main-screen-btns
+                a.btn-orange(href="auth1.html") Войти
+                a.main-screen-btns__link(href="reg1.html") Зарегистрироваться
