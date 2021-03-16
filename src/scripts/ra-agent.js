@@ -35,17 +35,22 @@
 
 (() => {
 	// Раскрытие карточек в списке квартир
-	document.querySelectorAll("[data-card-control]").forEach((control, index, controlList) => {
-		const card = control.parentElement.querySelector(".card");
-		card.style.display = "none";
+	function controlListControl() {
+		document.querySelectorAll("[data-card-control]").forEach((control, controlIndex, controlList) => {
+			const card = control.parentElement.querySelector(".card");
+			card.style.display = "none";
 
-		let cardList = [];
-		for (const control of controlList) cardList.push(control.parentElement.querySelector(".card"));
+			let cardList = [];
+			for (const control of controlList) cardList.push(control.parentElement.querySelector(".card"));
 
-		control.addEventListener("click", (event) => {
-			event.preventDefault();
-			for (const card of cardList) card.style.display = "none";
-			card.style.display = card.style.display == "none" ? "flex" : "none";
+			control.addEventListener("click", (event) => {
+				event.preventDefault();
+				cardList.forEach((card, cardIndex) => {
+					if (cardIndex !== controlIndex) card.style.display = "none";
+				});
+				card.style.display = card.style.display == "none" ? "flex" : "none";
+			});
 		});
-	});
+	}
+	controlListControl();
 })();

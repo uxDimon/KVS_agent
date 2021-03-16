@@ -938,30 +938,40 @@ ul.apartments > li.ra_apartments-headings.headings > ul > li.rooms {
 	margin-left: 100px;
 }
 
+ul.apartments > li.ra_apartments-headings.headings > ul > li.rooms,
+ul.apartments > li.ra_apartments-item > a > ul.features > li.rooms,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.rooms,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.rooms,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.rooms,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.rooms {
 	width: 6.5%;
 }
+ul.apartments > li.ra_apartments-headings.headings > ul > li.area,
+ul.apartments > li.ra_apartments-item > a > ul.features > li.area,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.area,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.area,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.area,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.area {
 	width: 7.5%;
 }
+ul.apartments > li.ra_apartments-headings.headings > ul > li.kitchen,
+ul.apartments > li.ra_apartments-item > a > ul.features > li.kitchen,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.kitchen,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.kitchen,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.kitchen,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.kitchen {
 	width: 5.5%;
 }
+ul.apartments > li.ra_apartments-headings.headings > ul > li.floor,
+ul.apartments > li.ra_apartments-item > a > ul.features > li.floor,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.floor,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.floor,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.floor,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.floor {
 	width: 5.5%;
 }
+ul.apartments > li.ra_apartments-headings.headings > ul > li.deadline,
+ul.apartments > li.ra_apartments-item > a > ul.features > li.deadline,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.deadline,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.deadline,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.deadline,
@@ -971,6 +981,8 @@ html > body > main > div > section.chooser > input#split_into_complexes:checked 
 ul.apartments > li.ra_apartments-item > a > ul.features > li.deadline > span {
 	display: block;
 }
+ul.apartments > li.ra_apartments-headings.headings > ul > li.object,
+ul.apartments > li.ra_apartments-item > a > ul.features > li.object,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.object,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.object,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.object,
@@ -978,6 +990,8 @@ html > body > main > div > section.chooser > input#split_into_complexes:checked 
 	width: 16.5%;
 }
 
+ul.apartments > li.ra_apartments-headings.headings > ul > li.advantages,
+ul.apartments > li.ra_apartments-item > a > ul.features > li.advantages,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.advantages,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.advantages,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.advantages,
@@ -986,26 +1000,32 @@ html > body > main > div > section.chooser > input#split_into_complexes:checked 
 	margin: 0;
 	justify-self: center;
 }
+ul.apartments > li.ra_apartments-headings.headings > ul > li.advantages,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.advantages,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.advantages {
 	text-align: center;
 }
+ul.apartments > li.ra_apartments-item > a > ul.features > li.advantages > .advantages,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.advantages > .advantages,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.advantages > .advantages {
 	justify-content: center;
 }
 
+ul.apartments > li.ra_apartments-headings.headings > ul > li.price,
+ul.apartments > li.ra_apartments-item > a > ul.features > li.price,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.price,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.price,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.price,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-item > a > ul.features > li.price {
 	width: 12%;
 }
+ul.apartments > li.ra_apartments-headings.headings > ul > li.star,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.star,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.star {
 	width: 7.5%;
 	text-align: center;
 }
+ul.apartments > li.ra_apartments-headings.headings > ul > li.reserve,
 html > body > main > div > section.chooser > input#split_into_complexes:not(:checked) ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.reserve,
 html > body > main > div > section.chooser > input#split_into_complexes:checked ~ ul.apartments > li.ra_apartments-headings.headings > ul > li.reserve {
 	width: 11%;
@@ -1246,5 +1266,13 @@ div.share > div.likely > div.likely__widget > span.likely__icon.likely__icon_wha
 div.share > div.likely > div.share-link::before {
 	background: url(images/social/link-40.svg) center center no-repeat;
 }
-
 /* end Карточка в списке .card */
+
+/* Фильер главная */
+html > body > main > div > section.slider-promo > form.chooser-form.ra_chooser-form > ul.fields > li[data-for="deadline"] {
+	width: 15%;
+}
+html > body > main > div > section.slider-promo > form.chooser-form.ra_chooser-form > ul.fields > li[data-for="objects"] {
+	width: 21%;
+}
+/* end Фильер главная */
