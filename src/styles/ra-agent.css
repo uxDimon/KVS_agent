@@ -60,25 +60,6 @@
 	transform: translate(0%, 0%) skewX(60deg);
 }
 
-.btn-ghost {
-	color: #232930;
-	border: 1px solid #c4c4c4;
-	display: inline-block;
-	padding: 10px 33px 12px !important;
-	text-align: center;
-	border-radius: 4px;
-	font-weight: 500;
-	font-size: 17px;
-	line-height: 28px;
-	transition: 200ms ease-in-out 0ms;
-	transition-property: color, border;
-}
-
-.btn-ghost:hover {
-	color: #d75924;
-	border-color: #d75924;
-}
-
 .btn-wrap {
 	display: grid;
 	grid-auto-flow: column;
@@ -1314,10 +1295,86 @@ html > body > main > div > section.slider-promo > form.chooser-form.ra_chooser-f
 .ra_form-grid-2 > * {
 	-ms-grid-column-span: 2;
 	grid-column-end: span 2;
-	margin-top: 0 !important;
+	margin: 0 !important;
 }
 
 .ra_form-grid-2 > .ra_form-grid__item1 {
 	-ms-grid-column-span: 1;
 	grid-column-end: span 1;
+}
+
+.ra_form-grid-5 {
+	display: -ms-grid !important;
+	display: grid !important;
+	-ms-grid-columns: 1fr 28px 1fr 28px 1fr 28px 1fr 28px 1fr 28px 1fr;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 26px 28px;
+}
+
+.ra_form-grid-5 > * {
+	-ms-grid-column-span: 5;
+	grid-column-end: span 5;
+	margin: 0 !important;
+}
+
+.ra_form-grid-5 > .ra_form-grid__item1 {
+	-ms-grid-column-span: 1;
+	grid-column-end: span 1;
+}
+
+.ra_form-grid-5 > .ra_form-grid__item2 {
+	-ms-grid-column-span: 2;
+	grid-column-end: span 2;
+}
+
+.ra_form-grid-5 > .ra_form-grid__item3 {
+	-ms-grid-column-span: 3;
+	grid-column-end: span 3;
+}
+
+.ra_form-grid-5 > .ra_form-grid__item4 {
+	-ms-grid-column-span: 4;
+	grid-column-end: span 4;
+}
+
+.btn-ghost {
+	color: #232930;
+	border: 1px solid #c4c4c4;
+	display: inline-block;
+	padding: 10px 33px 12px !important;
+	text-align: center;
+	border-radius: 4px;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 28px;
+	transition: 200ms ease-in-out 0ms;
+	transition-property: color, border;
+}
+
+.btn-ghost:hover {
+	color: #d75924;
+	border-color: #d75924;
+}
+
+.views .agents-stafflist__col {
+	padding: 0 12px;
+}
+
+.views .agents-stafflist__col:nth-child(1) {
+	flex: 0 0 10%;
+}
+.views .agents-stafflist__col:nth-child(2) {
+	flex: 0 0 10%;
+}
+.views .agents-stafflist__col:nth-child(3) {
+	flex: 0 0 20%;
+}
+.views .agents-stafflist__col:nth-child(4) {
+	flex: 0 0 20%;
+}
+.views .agents-stafflist__col:nth-child(5) {
+	flex: 0 0 18%;
+}
+.views .agents-stafflist__col:nth-child(6) {
+	flex: 0 0 17%;
 }
