@@ -1,0 +1,511 @@
+extends ../template
+
+block variables
+  - var title = 'Главная страница Агента'
+
+block content
+    main.components-container
+        .stream-narrow
+            section.header-with-caption
+                h1 Агентский портал
+                p.subtitle.subtitle-padding Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+
+        .stream-wide.agents__fix.agents-fix
+            h2.title Зафиксировать клиента
+            form.form.ajax-form(enctype="multipart/form-data" method="POST" action autocomplete="on" novalidate="novalidate")
+                ul.fields
+                    li.half-size
+                        input.form-control(data-required="yes" type="text" id="fio" value="" name="fio" required="")
+                        label(for="fio") ФИО 
+                        ul.messages
+                            li.error Заполните поле
+                    li.half-size
+                        input.form-control(data-required="yes" type="text" id="birthDate" value="" name="birthDate" required="")
+                        label(for="birthDate") Дата рождения
+                        ul.messages
+                            li.error Заполните поле
+                    li.half-size
+                        input.form-control(data-required="yes" type="text" id="phone" value="" data-type="phone" name="phone" required="" data-inputmask-mask="+7 (999) 999-9999" data-mask="+7 (999) 999-9999" data-has-mask="" inputmode="text")
+                        label(for="phone") Телефон
+                        ul.messages
+                            li.error Заполните поле
+                    li.half-size
+                        input.form-control(data-required="yes" type="text" id="city" value="" name="city" required="")
+                        label(for="city") Город
+                        ul.messages
+                            li.error Заполните поле
+                    li
+                        button.btn-orange(type="submit") Отправить заявку 
+        .stream-wide 
+            h2.title Объекты
+            section.slider-promo
+                <form class="chooser-form ra_chooser-form" id="chooser-form" name="_form" action="/search/" method="get">
+                    <ul class="fields">
+                        <li class="checkboxes" data-for="rooms">
+                            <ul class="row">
+                                <li>
+                                    <input type="checkbox" name="arrFilter_47_4108050209" id="arrFilter_47_4108050209" value="Y">
+                                    <label for="arrFilter_47_4108050209">Ст</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="arrFilter_47_2212294583" id="arrFilter_47_2212294583" value="Y">
+                                    <label for="arrFilter_47_2212294583">1к</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="arrFilter_47_450215437" id="arrFilter_47_450215437" value="Y">
+                                    <label for="arrFilter_47_450215437">2к</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="arrFilter_47_1842515611" id="arrFilter_47_1842515611" value="Y">
+                                    <label for="arrFilter_47_1842515611">3к</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-for="price">
+                            <div class="range" data-name="PRICE" data-format="price" data-min="2661736" data-max="20977550">
+                                <label>Цена (руб.)</label>
+                                <ul class="inputs" data-min-range="0" data-step="1" data-decimal-places="0">
+                                    <li>
+                                        <span class="label">от</span>
+                                        <span class="input">
+                                            <input class="user-min" type="text" name="arrFilter_53_MIN" id="arrFilter_53_MIN_HIDDEN" value="2661736" style="width: 84px;">
+                                            <span class="focus-out min">2661736</span>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="label">до</span>
+                                        <span class="input">
+                                            <input class="user-max" type="text" name="arrFilter_53_MAX" id="arrFilter_53_MAX_HIDDEN" value="20977550" style="width: 84px;">
+                                            <span class="focus-out max">20977550</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <div class="controls">
+                                    <button class="min" type="button" style="left: 34.2682px;"></button>
+                                    <button class="max" type="button" style="left: 220.621px;"></button>
+                                    <span class="range" style="right: 16.4314%; left: 12.9804%;"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="checkboxes" data-for="deadline">
+                            <input class="multiselect" type="checkbox" name="DEAD_LINE" id="DEAD_LINE98">
+                            <div class="multiselect">
+                                <label for="DEAD_LINE98">Срок сдачи</label>
+                                <label class="multiselect" for="DEAD_LINE98">
+                                    <span class="value" data-empty="Любой"></span>
+                                    <span class="plus"></span>
+                                </label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_300230734" id="arrFilter_98_300230734" value="Y" class="option">
+                                        <label for="arrFilter_98_300230734">Дом сдан</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_3980580551" id="arrFilter_98_3980580551" value="Y" class="option">
+                                        <label for="arrFilter_98_3980580551">IV кв. 2020 г.</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_1182655999" id="arrFilter_98_1182655999" value="Y" class="option">
+                                        <label for="arrFilter_98_1182655999">III кв. 2021 г.</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_2493410915" id="arrFilter_98_2493410915" value="Y" class="option">
+                                        <label for="arrFilter_98_2493410915">IV кв. 2021 г.</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_2041659290" id="arrFilter_98_2041659290" value="Y" class="option">
+                                        <label for="arrFilter_98_2041659290">III кв. 2022 г.</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_281082452" id="arrFilter_98_281082452" value="Y" class="option">
+                                        <label for="arrFilter_98_281082452">III кв. 2023 г.</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_98_591242005" id="arrFilter_98_591242005" value="Y" class="option">
+                                        <label for="arrFilter_98_591242005">IV кв. 2022 г.</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="checkboxes" data-for="objects">
+                            <input class="multiselect" type="checkbox" name="DEAD_LINE1" id="DEAD_LINE1">
+                            <div class="multiselect">
+                                <label for="DEAD_LINE1">Объект</label>
+                                <label class="multiselect" for="DEAD_LINE1">
+                                    <span class="value" data-empty="Любой"></span>
+                                    <span class="plus"></span>
+                                </label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_1_300230734" id="arrFilter_1_300230734" value="Y" class="option">
+                                        <label for="arrFilter_1_300230734">ЖК «Любоград» в Стрельне</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_1_3980580551" id="arrFilter_1_3980580551" value="Y" class="option">
+                                        <label for="arrFilter_1_3980580551">Клубный дом «Б57»</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_1_1182655999" id="arrFilter_1_1182655999" value="Y" class="option">
+                                        <label for="arrFilter_1_1182655999">ЖК «Ясно.Янино»</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_1_2493410915" id="arrFilter_1_2493410915" value="Y" class="option">
+                                        <label for="arrFilter_1_2493410915">ЖК «Наутилус»</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_1_2041659290" id="arrFilter_1_2041659290" value="Y" class="option">
+                                        <label for="arrFilter_1_2041659290">ЖК «Континенты»</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="arrFilter_1_281082452" id="arrFilter_1_281082452" value="Y" class="option">
+                                        <label for="arrFilter_1_281082452">ЖК «Новое Сертолово»</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        //- <li class="checkboxes" data-for="advantages">
+                        //-     <label for="advantages">Дополнительно</label>
+                        //-     <input class="toggle" type="checkbox" name="arrFilter_115_2367533627" id="arrFilter_115_2367533627" value="Y">
+                        //-     <label class="toggle" for="arrFilter_115_2367533627">Отделка</label>
+                        //- </li>
+                        <li class="submit">
+                            <button type="submit">Найти квартиру</button>
+                        </li>
+                    </ul>
+                </form>
+
+        <div class="stream-wide">
+            <section class="chooser apartments">
+                <ul class="apartments">
+                    <li class="complex">
+                        <figure><img src="assets/images/chooser/sertolovo.png" alt="ЖК «Новое Сертолово»" title="ЖК «Новое Сертолово»"></figure>
+                        <div class="heading">
+                            <img class="logo" src="assets/images/chooser/sertolovo.svg" alt="ЖК «Новое Сертолово»" title="ЖК «Новое Сертолово»">
+                            <h3>ЖК&nbsp;«Новое Сертолово»</h3>
+                            <ul class="subway">
+                                <li><span style="background: #f5a623;"></span>Ладожская</li>
+                                <li><span style="background: #f5a623;"></span>Ладожская</li>
+                            </ul>
+                            <p class="address">Всеволожский район, ул.&nbsp;Ясная</p>
+                        </div>
+                        <ul class="deadline" data-label=" Срок сдачи">
+                            <li><time datetime="2019-01-01">Сданы</time> 1,&nbsp;2&nbsp;очередь <span class="buildings">корпуса&nbsp;2.1 и&nbsp;2.2</span></li>
+                            <li><time datetime="2020-04-01">II кв. 2020</time> 2&nbsp;очередь<span class="buildings">корпуса&nbsp;1.1, 1.2, 1.3, 1.4&nbsp;ЖГ-12</span></li>
+                            <li><time datetime="2020-04-01">II кв. 2020</time> 2&nbsp;очередь <span class="buildings">корпуса&nbsp;1.1, 1.2, 1.3, 1.4&nbsp;ЖГ-12</span></li>
+                            <li><time datetime="2021-10-01">IV кв. 2021</time> 2,&nbsp;3&nbsp;очередь <span class="buildings">корпуса&nbsp;3.1, 8.3, 8.6</span></li>
+                            <li><time datetime="2021-10-01">IV кв. 2021</time> 2,&nbsp;3&nbsp;очередь <span class="buildings">корпуса&nbsp;3.1, 8.3, 8.6</span></li>
+                            <li><time datetime="2021-10-01">IV кв. 2021</time> 2,&nbsp;3&nbsp;очередь <span class="buildings">корпуса&nbsp;3.1, 8.3, 8.6</span></li>
+                        </ul>
+                    </li>
+                    <li class="headings ra_apartments-headings">
+                        <ul>
+                            <li class="rooms"><label for="rooms_asc">Комнат <span></span></label></li>
+                            <li class="area"><label for="area_asc">Площадь <span></span></label></li>
+                            <li class="kitchen"><label for="kitchen_asc">Кухня <span></span></label></li>
+                            <li class="floor"><label for="floor_asc">Этаж <span></span></label></li>
+                            //- <li class="complex"><label for="complex_asc">Объек <span></span></label></li>
+                            <li class="deadline"><label for="deadline_asc">Срок сдачи <span></span></label></li>
+                            <li class="object"><label for="object_asc">Объект <span></span></label></li>
+                            <li class="advantages">Особенности</li>
+                            <li class="price"><label class="checked" for="price_asc">Стоимость <span></span></label></li>
+                            <li class="star">Избранное</li>
+                            <li class="reserve">Резерв</li>
+                        </ul>
+                        <select name="sort" id="sort">
+                            <option value="area_asc">Сортировать по увеличению площади</option>
+                            <option value="area_desc">Сортировать по уменьшению площади</option>
+                            <option value="price_asc" selected="">Сортировать по увеличению цены</option>
+                            <option value="price_desc">Сортировать по уменьшению цены</option>
+                        </select>
+                    </li>
+                    <li class="ra_apartments-item" data-booked="yes">
+                        <a href="#" data-card-control>
+                            <ul class="features">
+                                <li class="layout">
+                                    <figure class="layout"><img src="assets/images/apartment_card/layout.jpg" alt="Планировка квартиры № 1" title="Планировка квартиры № 1"></figure>
+                                    <figure class="zoom"><img src="assets/images/apartment_card/layout.jpg" alt="Планировка квартиры № 1" title="Планировка квартиры № 1"></figure>
+                                </li>
+                                <li class="rooms" data-short="2к">2-комнатная <span>№ 1</span></li>
+                                <li class="area" data-label="Площадь">22&nbsp;м²</li>
+                                <li class="kitchen" data-label="Кухня">8&nbsp;м²</li>
+                                <li class="floor" data-label="Этаж">1</li>
+                                //- <li class="complex">ЖК&nbsp;«Новое Сертолово» <span>Корпус&nbsp;Г</span></li>
+                                <li class="deadline" data-label="Срок&nbsp;сдачи">III&nbsp;кв. 2021&nbsp;г.<span data-complex="ЖК&nbsp;«Новое Сертолово» · ">Корпус&nbsp;Г</span></li>
+                                <li class="object" >ЖК&nbsp;«Новое&nbsp;Сертолово»<span>Корпус&nbsp;2</span></li>
+                                <li class="advantages">
+                                    <ul class="advantages">
+                                        <li class="furniture item" aria-label="С мебелью"></li>
+                                        <li class="finishing item" aria-label="Чистовая отделка"></li>
+                                        <li class="kitchen item" aria-label="Встроенная кухня"></li>
+                                        <li class="additional">+5</li>
+                                    </ul>
+                                    <ul class="tooltip">
+                                        <li>C&nbsp;мебелью</li>
+                                        <li>Чистовая отделка</li>
+                                        <li>Встроенная кухня</li>
+                                        <li>Видовая</li>
+                                        <li>Кухня-гостиная</li>
+                                        <li>Два санузла</li>
+                                        <li>Терраса</li>
+                                        <li>Мансарда</li>
+                                    </ul>
+                                </li>
+                                <li class="price"><span class="booked">Бронь до&nbsp;12&nbsp;апреля</span> 5&nbsp;723&nbsp;239&nbsp;₽</li>
+                            </ul>
+                        </a>
+                        .bottom-wrap 
+                            <button class="star" type="button">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="starPath" d="M15 2.11288L19.1886 10.4417L19.306 10.6751L19.5647 10.712L28.911 12.0448L22.1544 18.5082L21.9615 18.6927L22.0075 18.9556L23.6046 28.0938L15.2293 23.7727L15 23.6544L14.7707 23.7727L6.39545 28.0938L7.99253 18.9556L8.03848 18.6927L7.84562 18.5082L1.08897 12.0448L10.4353 10.712L10.694 10.6751L10.8114 10.4417L15 2.11288Z" stroke="#FF8635" />
+                                </svg>                            
+                            </button>
+                            <button class="btn-orange reserve" type="submit">Зарезервировать</button>
+                        
+                        <div class="card"> 
+                            <div class="info">
+                                <h1>1-комнатная, 33.6 м²</h1>
+                                <ul class="features">
+                                    <li class="advantages">
+                                        <ul>
+                                            <li style="background-image: url(assets/styles/images/advantages/furniture.svg)">Чистовая отделка</li>
+                                            <li style="background-image: url(assets/styles/images/advantages/finishing.svg)">С мебелью</li>
+                                            <li style="background-image: url(assets/styles/images/advantages/kitchen.svg)">Встроенная кухня</li>
+                                        </ul>
+                                    </li>
+                                    <li class="price">
+                                        <input type="checkbox" name="online_discount" id="online_discount" />
+                                        <span class="pretitle">Цена при 100 % оплате</span>
+                                        <strong data-value="4038720" data-sale="3938720">4 038 720 ₽</strong>
+                                    </li>
+                                    <li class="complex">ЖК «Новое Сертолово», Корпус 3 <span class="deadline">2 кв. 2023 г.</span></li>
+                                    <li><strong>12.7&nbsp;м²</strong> жилая площадь</li>
+                                    <li><strong>12.4&nbsp;м²</strong> кухня</li>
+                                    <li><strong>3</strong>&nbsp;этаж</li>
+                                    <li><strong>209</strong>&nbsp;номер</li>
+                                </ul>
+                                <button class="btn-orange" type="button" add-to-cart="125932">Зарезервировать</button>
+                                <button class="btn-orange" type="button" add-to-cart="125932">Запись на показ</button>
+                            </div>
+                            <div class="card-slider-wrapper slider-wrapper">
+                                <img class="ra_card-img" src="assets/images/ns-im3k_11_3_2_33-6.svg" alt="Планировка квартиры № 209" title="Планировка квартиры № 209" />
+                                <a href="#lightbox/apartment/zoom" class="zoom" aria-label="Увеличить планировку"></a>
+                            </div>
+                            <ul class="actions">
+                                <li>
+                                    <a class="pdf" href="/pdf.php?idunion=8&amp;name=%D0%96%D0%9A+%C2%AB%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5+%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%C2%BB&amp;price=4038720&amp;rooms=1&amp;aa=33.6&amp;deadline=2+%D0%BA%D0%B2.+2023+%D0%B3.&amp;date=2+%D0%BA%D0%B2.+2023%D0%B3.+&amp;corp=%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81+3&amp;pod=%D0%9F%D0%BE%D0%B4%D1%8A%D0%B5%D0%B7%D0%B4+11&amp;al=12.7&amp;ak=12.4&amp;at=0&amp;floor=3&amp;maxfl=4&amp;img1=%2Fupload%2Fplacement%2Fplanflat%2Fns-im3k_11_3_2_33-6.svg&amp;img2=%2Fupload%2Fplacement%2Fplancorpus%2Fns-im3k_11_3_2_33-6_p.svg&amp;balcony=1.5&amp;obNumb=209&amp;fin=%D0%A1+%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%BE%D0%B9&amp;inkithc=&amp;jk=%2Fobekty%2Fsertolovo%2F&amp;type=9" target="_blank" >Cкачать PDF</a>
+                                </li>
+                                <li><button class="print" type="button" onclick="window.print();">Распечатать</button></li>
+                                <li>
+                                    <div class="share">
+                                        <span>Поделиться</span>
+                                        <div class="likely">
+                                            <div class="vkontakte" aria-label="Поделиться Вконтакте"></div>
+                                            <div class="facebook" aria-label="Поделиться в Фейсбуке"></div>
+                                            <div class="whatsapp" aria-label="Поделиться в Вотсаппе"></div>
+                                            <div class="share-link" aria-label="Скопировать ссылку"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="ra_apartments-item">
+                        <a href="#" data-card-control>
+                            <ul class="features">
+                                <li class="layout">
+                                    <figure class="layout"><img src="assets/images/apartment_card/layout.jpg" alt="Планировка квартиры № 1" title="Планировка квартиры № 1"></figure>
+                                    <figure class="zoom"><img src="assets/images/apartment_card/layout.jpg" alt="Планировка квартиры № 1" title="Планировка квартиры № 1"></figure>
+                                </li>
+                                <li class="rooms" data-short="2к">2-комнатная <span>№ 1</span></li>
+                                <li class="area" data-label="Площадь">22&nbsp;м²</li>
+                                <li class="kitchen" data-label="Кухня">8&nbsp;м²</li>
+                                <li class="floor" data-label="Этаж">1</li>
+                                //- <li class="complex">ЖК&nbsp;«Новое Сертолово» <span>Корпус&nbsp;Г</span></li>
+                                <li class="deadline" data-label="Срок&nbsp;сдачи">III&nbsp;кв. 2021&nbsp;г.<span data-complex="ЖК&nbsp;«Новое Сертолово» · ">Корпус&nbsp;Г</span></li>
+                                <li class="object" >ЖК&nbsp;«Новое&nbsp;Сертолово»<span>Корпус&nbsp;2</span></li>
+                                <li class="advantages">
+                                    <ul class="advantages">
+                                        <li class="furniture item" aria-label="С мебелью"></li>
+                                        <li class="finishing item" aria-label="Чистовая отделка"></li>
+                                        <li class="kitchen item" aria-label="Встроенная кухня"></li>
+                                        <li class="additional">+5</li>
+                                    </ul>
+                                    <ul class="tooltip">
+                                        <li>C&nbsp;мебелью</li>
+                                        <li>Чистовая отделка</li>
+                                        <li>Встроенная кухня</li>
+                                        <li>Видовая</li>
+                                        <li>Кухня-гостиная</li>
+                                        <li>Два санузла</li>
+                                        <li>Терраса</li>
+                                        <li>Мансарда</li>
+                                    </ul>
+                                </li>
+                                <li class="price"><span class="booked">Бронь до&nbsp;12&nbsp;апреля</span> 5&nbsp;723&nbsp;239&nbsp;₽</li>
+                            </ul>
+                        </a>
+                        .bottom-wrap 
+                            <button class="star" type="button">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="starPath" d="M15 2.11288L19.1886 10.4417L19.306 10.6751L19.5647 10.712L28.911 12.0448L22.1544 18.5082L21.9615 18.6927L22.0075 18.9556L23.6046 28.0938L15.2293 23.7727L15 23.6544L14.7707 23.7727L6.39545 28.0938L7.99253 18.9556L8.03848 18.6927L7.84562 18.5082L1.08897 12.0448L10.4353 10.712L10.694 10.6751L10.8114 10.4417L15 2.11288Z" stroke="#FF8635" />
+                                </svg>                            
+                            </button>
+                            <button class="btn-orange reserve" type="submit">Зарезервировать</button>
+                        
+                        <div class="card"> 
+                            <div class="info">
+                                <h1>1-комнатная, 33.6 м²</h1>
+                                <ul class="features">
+                                    <li class="advantages">
+                                        <ul>
+                                            <li style="background-image: url(assets/styles/images/advantages/furniture.svg)">Чистовая отделка</li>
+                                            <li style="background-image: url(assets/styles/images/advantages/finishing.svg)">С мебелью</li>
+                                            <li style="background-image: url(assets/styles/images/advantages/kitchen.svg)">Встроенная кухня</li>
+                                        </ul>
+                                    </li>
+                                    <li class="price">
+                                        <input type="checkbox" name="online_discount" id="online_discount" />
+                                        <span class="pretitle">Цена при 100 % оплате</span>
+                                        <strong data-value="4038720" data-sale="3938720">4 038 720 ₽</strong>
+                                    </li>
+                                    <li class="complex">ЖК «Новое Сертолово», Корпус 3 <span class="deadline">2 кв. 2023 г.</span></li>
+                                    <li><strong>12.7&nbsp;м²</strong> жилая площадь</li>
+                                    <li><strong>12.4&nbsp;м²</strong> кухня</li>
+                                    <li><strong>3</strong>&nbsp;этаж</li>
+                                    <li><strong>209</strong>&nbsp;номер</li>
+                                </ul>
+                                <button class="btn-orange" type="button" add-to-cart="125932">Зарезервировать</button>
+                                <button class="btn-orange" type="button" add-to-cart="125932">Запись на показ</button>
+                            </div>
+                            <div class="card-slider-wrapper slider-wrapper">
+                                <img class="ra_card-img" src="assets/images/ns-im3k_11_3_2_33-6.svg" alt="Планировка квартиры № 209" title="Планировка квартиры № 209" />
+                                <a href="#lightbox/apartment/zoom" class="zoom" aria-label="Увеличить планировку"></a>
+                            </div>
+                            <ul class="actions">
+                                <li>
+                                    <a class="pdf" href="/pdf.php?idunion=8&amp;name=%D0%96%D0%9A+%C2%AB%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5+%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%C2%BB&amp;price=4038720&amp;rooms=1&amp;aa=33.6&amp;deadline=2+%D0%BA%D0%B2.+2023+%D0%B3.&amp;date=2+%D0%BA%D0%B2.+2023%D0%B3.+&amp;corp=%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81+3&amp;pod=%D0%9F%D0%BE%D0%B4%D1%8A%D0%B5%D0%B7%D0%B4+11&amp;al=12.7&amp;ak=12.4&amp;at=0&amp;floor=3&amp;maxfl=4&amp;img1=%2Fupload%2Fplacement%2Fplanflat%2Fns-im3k_11_3_2_33-6.svg&amp;img2=%2Fupload%2Fplacement%2Fplancorpus%2Fns-im3k_11_3_2_33-6_p.svg&amp;balcony=1.5&amp;obNumb=209&amp;fin=%D0%A1+%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%BE%D0%B9&amp;inkithc=&amp;jk=%2Fobekty%2Fsertolovo%2F&amp;type=9" target="_blank" >Cкачать PDF</a>
+                                </li>
+                                <li><button class="print" type="button" onclick="window.print();">Распечатать</button></li>
+                                <li>
+                                    <div class="share">
+                                        <span>Поделиться</span>
+                                        <div class="likely">
+                                            <div class="vkontakte" aria-label="Поделиться Вконтакте"></div>
+                                            <div class="facebook" aria-label="Поделиться в Фейсбуке"></div>
+                                            <div class="whatsapp" aria-label="Поделиться в Вотсаппе"></div>
+                                            <div class="share-link" aria-label="Скопировать ссылку"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="ra_apartments-item">
+                        <a href="#" data-card-control>
+                            <ul class="features">
+                                <li class="layout">
+                                    <figure class="layout"><img src="assets/images/apartment_card/layout.jpg" alt="Планировка квартиры № 1" title="Планировка квартиры № 1"></figure>
+                                    <figure class="zoom"><img src="assets/images/apartment_card/layout.jpg" alt="Планировка квартиры № 1" title="Планировка квартиры № 1"></figure>
+                                </li>
+                                <li class="rooms" data-short="2к">2-комнатная <span>№ 1</span></li>
+                                <li class="area" data-label="Площадь">22&nbsp;м²</li>
+                                <li class="kitchen" data-label="Кухня">8&nbsp;м²</li>
+                                <li class="floor" data-label="Этаж">1</li>
+                                //- <li class="complex">ЖК&nbsp;«Новое Сертолово» <span>Корпус&nbsp;Г</span></li>
+                                <li class="deadline" data-label="Срок&nbsp;сдачи">III&nbsp;кв. 2021&nbsp;г.<span data-complex="ЖК&nbsp;«Новое Сертолово» · ">Корпус&nbsp;Г</span></li>
+                                <li class="object" >ЖК&nbsp;«Новое&nbsp;Сертолово»<span>Корпус&nbsp;2</span></li>
+                                <li class="advantages">
+                                    <ul class="advantages">
+                                        <li class="furniture item" aria-label="С мебелью"></li>
+                                        <li class="finishing item" aria-label="Чистовая отделка"></li>
+                                        <li class="kitchen item" aria-label="Встроенная кухня"></li>
+                                        <li class="additional">+5</li>
+                                    </ul>
+                                    <ul class="tooltip">
+                                        <li>C&nbsp;мебелью</li>
+                                        <li>Чистовая отделка</li>
+                                        <li>Встроенная кухня</li>
+                                        <li>Видовая</li>
+                                        <li>Кухня-гостиная</li>
+                                        <li>Два санузла</li>
+                                        <li>Терраса</li>
+                                        <li>Мансарда</li>
+                                    </ul>
+                                </li>
+                                <li class="price"><span class="booked">Бронь до&nbsp;12&nbsp;апреля</span> 5&nbsp;723&nbsp;239&nbsp;₽</li>
+                            </ul>
+                        </a>
+                        .bottom-wrap 
+                            <button class="star" type="button">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="starPath" d="M15 2.11288L19.1886 10.4417L19.306 10.6751L19.5647 10.712L28.911 12.0448L22.1544 18.5082L21.9615 18.6927L22.0075 18.9556L23.6046 28.0938L15.2293 23.7727L15 23.6544L14.7707 23.7727L6.39545 28.0938L7.99253 18.9556L8.03848 18.6927L7.84562 18.5082L1.08897 12.0448L10.4353 10.712L10.694 10.6751L10.8114 10.4417L15 2.11288Z" stroke="#FF8635" />
+                                </svg>                            
+                            </button>
+                            <button class="btn-orange reserve" type="submit">Зарезервировать</button>
+                        
+                        <div class="card"> 
+                            <div class="info">
+                                <h1>1-комнатная, 33.6 м²</h1>
+                                <ul class="features">
+                                    <li class="advantages">
+                                        <ul>
+                                            <li style="background-image: url(assets/styles/images/advantages/furniture.svg)">Чистовая отделка</li>
+                                            <li style="background-image: url(assets/styles/images/advantages/finishing.svg)">С мебелью</li>
+                                            <li style="background-image: url(assets/styles/images/advantages/kitchen.svg)">Встроенная кухня</li>
+                                        </ul>
+                                    </li>
+                                    <li class="price">
+                                        <input type="checkbox" name="online_discount" id="online_discount" />
+                                        <span class="pretitle">Цена при 100 % оплате</span>
+                                        <strong data-value="4038720" data-sale="3938720">4 038 720 ₽</strong>
+                                    </li>
+                                    <li class="complex">ЖК «Новое Сертолово», Корпус 3 <span class="deadline">2 кв. 2023 г.</span></li>
+                                    <li><strong>12.7&nbsp;м²</strong> жилая площадь</li>
+                                    <li><strong>12.4&nbsp;м²</strong> кухня</li>
+                                    <li><strong>3</strong>&nbsp;этаж</li>
+                                    <li><strong>209</strong>&nbsp;номер</li>
+                                </ul>
+                                <button class="btn-orange" type="button" add-to-cart="125932">Зарезервировать</button>
+                                <button class="btn-orange" type="button" add-to-cart="125932">Запись на показ</button>
+                            </div>
+                            <div class="card-slider-wrapper slider-wrapper">
+                                <img class="ra_card-img" src="assets/images/ns-im3k_11_3_2_33-6.svg" alt="Планировка квартиры № 209" title="Планировка квартиры № 209" />
+                                <a href="#lightbox/apartment/zoom" class="zoom" aria-label="Увеличить планировку"></a>
+                            </div>
+                            <ul class="actions">
+                                <li>
+                                    <a class="pdf" href="/pdf.php?idunion=8&amp;name=%D0%96%D0%9A+%C2%AB%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5+%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%C2%BB&amp;price=4038720&amp;rooms=1&amp;aa=33.6&amp;deadline=2+%D0%BA%D0%B2.+2023+%D0%B3.&amp;date=2+%D0%BA%D0%B2.+2023%D0%B3.+&amp;corp=%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81+3&amp;pod=%D0%9F%D0%BE%D0%B4%D1%8A%D0%B5%D0%B7%D0%B4+11&amp;al=12.7&amp;ak=12.4&amp;at=0&amp;floor=3&amp;maxfl=4&amp;img1=%2Fupload%2Fplacement%2Fplanflat%2Fns-im3k_11_3_2_33-6.svg&amp;img2=%2Fupload%2Fplacement%2Fplancorpus%2Fns-im3k_11_3_2_33-6_p.svg&amp;balcony=1.5&amp;obNumb=209&amp;fin=%D0%A1+%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%BE%D0%B9&amp;inkithc=&amp;jk=%2Fobekty%2Fsertolovo%2F&amp;type=9" target="_blank" >Cкачать PDF</a>
+                                </li>
+                                <li><button class="print" type="button" onclick="window.print();">Распечатать</button></li>
+                                <li>
+                                    <div class="share">
+                                        <span>Поделиться</span>
+                                        <div class="likely">
+                                            <div class="vkontakte" aria-label="Поделиться Вконтакте"></div>
+                                            <div class="facebook" aria-label="Поделиться в Фейсбуке"></div>
+                                            <div class="whatsapp" aria-label="Поделиться в Вотсаппе"></div>
+                                            <div class="share-link" aria-label="Скопировать ссылку"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="more"><button type="button">Показать еще 20 квартир из 617</button></li>                    
+                </ul>
+            </section>
+        </div>
+
+    <div class="lightbox show">
+        <div class="wrapper">
+            <button type="button" class="close">Закрыть</button>
+            <div class="content">
+                <h1>Заявка на просмотр отправлена</h1>
+                <p class="lead">После отправки формы ожидайте уведомление  о подтверждении записи на показ.</p>
+                <div class="btn-wrap">
+                    <button class="btn-orange">Записать</button> 
+                    <button class="btn-ghost">Отменить</button> 
+                </div>
+            </div>
+        </div>
+    </div>
