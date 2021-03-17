@@ -53,4 +53,27 @@
 		});
 	}
 	controlListControl();
+
+	const tabList = document.querySelectorAll("[data-tab-block-wrap]");
+	if (tabList) {
+		for (const tabBlock of tabList) {
+			const tabControlList = document.querySelectorAll(`[data-tab-control-wrap='${tabBlock.dataset.tabBlockWrap}'] [data-tab-control]`);
+			const tabBlockList = tabBlock.querySelectorAll("[data-tab-block]");
+
+			function tabSwith(tabBlockList, index) {
+				for (const tabBlock of tabBlockList) {
+					tabBlock.style.display = "none";
+				}
+				tabBlockList[index].style.display = "";
+			}
+
+			tabSwith(tabBlockList, 0);
+
+			tabControlList.forEach((tabControl, index) => {
+				tabControl.addEventListener("change", () => {
+					tabSwith(tabBlockList, index);
+				});
+			});
+		}
+	}
 })();
