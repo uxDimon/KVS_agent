@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ЛК Календарь мероприятий</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" type="text/css" href="assets/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/ra-agent.css">
+  </head>
+  <body class="agents"><input class="state-switch" type="checkbox" id="header-menu">
+<header>
+<a class="logo" href="agent-mainpage.html">
+<svg xmlns="http://www.w3.org/2000/svg" width="187" height="168" viewBox="0 0 187 168" fill="none" role="img">
+<path d="M0 0L186.72 83.33L0 167.14V0Z" fill="#191B1E"></path>
+<path d="M59.8899 131.7L42.7099 139.38L28.8399 101.46V145.62L8.63989 154.68V12.25L28.8399 21.3V61.14L40.5899 26.56L59.4099 34.95L70.5399 105.73L80.2399 44.24L123.53 63.59V72.53L98.5199 61.36L97.4799 67.97L123.53 79.64V103.14L89.5099 118.47L92.6099 98.81L109.59 91.12L89.5099 82.13L83.3399 121.18L60.4299 131.45L46.5199 59.46L39.7099 78.96L59.8899 131.7Z" fill="white"></path>
+<path d="M130.74 66.8201L167.71 83.3101L130.74 99.8601V66.8201Z" fill="#F4691B"></path>
+</svg>
+</a>
+<div>
+<p><span>Агентский портал «КВС».</span><span>Строим мир — строим отношения!</span></p>
+<a class="phone-call" href="tel:+78002220965">8 800 222 0965</a>
+<nav>
+<ul>
+<li>
+<a href="objects.html">Объекты</a>
+</li>
+<li>
+<a href="deals.html">Сделки</a>
+</li>
+<li>
+<a href="clients.html">Клиенты</a>
+</li>
+<li>
+<a href="documents.html">Документы</a>
+</li>
+<li>
+<a href="news.html">Новости</a>
+</li>
+</ul>
+</nav>
+<div class="account-info">
+<span>Иван Иванович</span>
+<span>АН «Название агентства»</span>
+</div>
+<a class="account active" href="lk-data.html">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img">
+<path d="M12 0.5C14.8 0.5 17 2.7 17 5.5V6.5C17 9.3 14.8 11.5 12 11.5C9.2 11.5 7 9.3 7 6.5V5.5C7 2.7 9.2 0.5 12 0.5ZM21.5 17.9C20.6 15.8 19 14.1 17 13C15.7 14.2 14 15 12 15C10 15 8.3 14.2 7 13C5 14.1 3.4 15.8 2.5 17.9C4.5 21 8 23 12 23C16 23 19.5 21 21.5 17.9Z" fill="#FFFFFF"></path>
+</svg>Личный кабинет
+</a>
+</div>
+<label for="header-menu">Открыть/закрыть меню</label>
+</header>
+    <main class="components-container">
+      <div class="stream-wide">
+        <section class="header-with-caption">
+          <h1>Личный кабинет</h1>
+          <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="submenu">
+            <ul>
+              <li><a href="lk-data.html">Личные данные</a></li>
+              <li><a href="lk-staff.html">Сотрудники</a></li>
+              <li><a href="lk-notices.html">Уведомления</a></li>
+              <li><a class="current" href="lk-events.html">Календарь мероприятий</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="stream-wide">
+        <section>
+          <div class="events__navigation events-navigation">
+            <div class="events-navigation__col">
+              <div class="events-navigation__arr"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.24976 10.4999C6.2501 10.3246 6.18907 10.1548 6.07726 10.0199L2.71726 5.99987L5.95726 1.97237C6.01956 1.89565 6.06608 1.80738 6.09415 1.71262C6.12223 1.61787 6.1313 1.5185 6.12084 1.42023C6.11039 1.32196 6.08062 1.22672 6.03324 1.13999C5.98586 1.05327 5.9218 0.976757 5.84476 0.914865C5.76804 0.852565 5.67977 0.806042 5.58501 0.777968C5.49026 0.749894 5.39089 0.740824 5.29262 0.751278C5.19435 0.761733 5.09911 0.791506 5.01238 0.838886C4.92566 0.886267 4.84915 0.95032 4.78726 1.02737L1.16476 5.52737C1.05445 5.66157 0.994141 5.8299 0.994141 6.00362C0.994141 6.17733 1.05445 6.34567 1.16476 6.47987L4.91476 10.9799C4.97772 11.0558 5.05504 11.1186 5.1423 11.1646C5.22957 11.2106 5.32505 11.239 5.42328 11.248C5.52151 11.2571 5.62057 11.2467 5.71477 11.2174C5.80897 11.1881 5.89647 11.1405 5.97226 11.0774C6.05829 11.0076 6.1278 10.9196 6.17578 10.8197C6.22376 10.7199 6.24902 10.6106 6.24976 10.4999Z" fill="black"/>
+</svg>
+              </div>
+              <div class="events-navigation__current">Сегодня</div>
+              <div class="events-navigation__arr"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.750243 10.4999C0.7499 10.3246 0.810932 10.1548 0.922742 10.0199L4.28274 5.99987L1.04274 1.97237C0.980444 1.89565 0.93392 1.80738 0.905846 1.71262C0.877772 1.61787 0.868702 1.5185 0.879157 1.42023C0.889611 1.32196 0.919384 1.22672 0.966764 1.13999C1.01414 1.05327 1.0782 0.976757 1.15524 0.914865C1.23196 0.852565 1.32023 0.806042 1.41499 0.777968C1.50974 0.749894 1.60911 0.740824 1.70738 0.751278C1.80565 0.761733 1.90089 0.791506 1.98762 0.838886C2.07434 0.886267 2.15085 0.95032 2.21274 1.02737L5.83524 5.52737C5.94555 5.66157 6.00586 5.8299 6.00586 6.00362C6.00586 6.17733 5.94555 6.34567 5.83524 6.47987L2.08524 10.9799C2.02228 11.0558 1.94496 11.1186 1.8577 11.1646C1.77043 11.2106 1.67495 11.239 1.57672 11.248C1.47849 11.2571 1.37943 11.2467 1.28523 11.2174C1.19103 11.1881 1.10353 11.1405 1.02774 11.0774C0.941708 11.0076 0.872202 10.9196 0.824221 10.8197C0.77624 10.7199 0.750975 10.6106 0.750243 10.4999Z" fill="black"/>
+</svg>
+              </div>
+            </div>
+            <div class="events-navigation__col"><a class="events-navigation__item" href="#">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.5 0C2.91576 0 0 2.91576 0 6.5C0 10.0842 2.91576 13 6.5 13C10.0842 13 13 10.0842 13 6.5C13 2.91576 10.0842 0 6.5 0ZM9.34375 7.04163H7.04163V9.34375C7.04163 9.64278 6.79903 9.88538 6.5 9.88538C6.20097 9.88538 5.95837 9.64278 5.95837 9.34375V7.04163H3.65625C3.35722 7.04163 3.11462 6.79903 3.11462 6.5C3.11462 6.20097 3.35722 5.95837 3.65625 5.95837H5.95837V3.65625C5.95837 3.35722 6.20097 3.11462 6.5 3.11462C6.79903 3.11462 7.04163 3.35722 7.04163 3.65625V5.95837H9.34375C9.64278 5.95837 9.88538 6.20097 9.88538 6.5C9.88538 6.79903 9.64278 7.04163 9.34375 7.04163Z" fill="#68717B"/>
+</svg>Новое событие</a></div>
+          </div>
+          <div class="events-timetable-wrap">
+            <ul class="events__timetable events-timetable">
+              <li class="events-timetable__row events-timetable__row--header">
+                <ul>
+                  <li class="events-timetable__col">Название</li>
+                  <li class="events-timetable__col">Начало</li>
+                  <li class="events-timetable__col">Окончание</li>
+                  <li class="events-timetable__col">Описание</li>
+                  <li class="events-timetable__col"> </li>
+                </ul>
+              </li>
+              <li class="events-timetable__row">
+                <ul>
+                  <li class="events-timetable__col">Осмотр квартиры по брони №123456</li>
+                  <li class="events-timetable__col">9:00</li>
+                  <li class="events-timetable__col">10:00</li>
+                  <li class="events-timetable__col">Осмотр квартиры в ЖК Новое Сертолово. Клиент Пупкин Иван Иванович</li>
+                  <li class="events-timetable__col agents-stafflist__col"><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="circle-wrap" cx="17.5" cy="17.5" r="17.5" fill="#F4F5F6"/>
+<circle cx="17.5" cy="9.5" r="2.5" fill="#575757"/>
+<circle cx="17.5" cy="17.5" r="2.5" fill="#575757"/>
+<circle cx="17.5" cy="25.5" r="2.5" fill="#575757"/>
+</svg>
+                  </li>
+                </ul>
+              </li>
+              <li class="events-timetable__row">
+                <ul>
+                  <li class="events-timetable__col">Встреча с представителем КВС</li>
+                  <li class="events-timetable__col">12:00</li>
+                  <li class="events-timetable__col">12:30</li>
+                  <li class="events-timetable__col">Главный офис, позвонить за 30 минут до встречи</li>
+                  <li class="events-timetable__col agents-stafflist__col"><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="circle-wrap" cx="17.5" cy="17.5" r="17.5" fill="#F4F5F6"/>
+<circle cx="17.5" cy="9.5" r="2.5" fill="#575757"/>
+<circle cx="17.5" cy="17.5" r="2.5" fill="#575757"/>
+<circle cx="17.5" cy="25.5" r="2.5" fill="#575757"/>
+</svg>
+                  </li>
+                </ul>
+              </li>
+              <li class="events-timetable__row">
+                <ul>
+                  <li class="events-timetable__col">Созвон с клиентом</li>
+                  <li class="events-timetable__col">16:00</li>
+                  <li class="events-timetable__col">16:30</li>
+                  <li class="events-timetable__col">+7 999 999-99-99 - хочет узнать про двухкомнатные квартиры в ЖК Новое Сертолово</li>
+                  <li class="events-timetable__col agents-stafflist__col"><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="circle-wrap" cx="17.5" cy="17.5" r="17.5" fill="#F4F5F6"/>
+<circle cx="17.5" cy="9.5" r="2.5" fill="#575757"/>
+<circle cx="17.5" cy="17.5" r="2.5" fill="#575757"/>
+<circle cx="17.5" cy="25.5" r="2.5" fill="#575757"/>
+</svg>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="agents-stafflist__info agents-stafflist-info"><a class="agents-stafflist-info__item" href="#">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" id="1">
+<path d="M0 10.292V13H2.70796L10.6946 5.01333L7.98667 2.30537L0 10.292ZM12.7888 2.91918C13.0704 2.63755 13.0704 2.18261 12.7888 1.90099L11.099 0.211221C10.8174 -0.0704069 10.3624 -0.0704069 10.0808 0.211221L8.75934 1.5327L11.4673 4.24066L12.7888 2.91918Z" fill="#515151"/>
+</svg>Править</a><a class="agents-stafflist-info__item" href="#">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.41754 0.784729H7.59023V1.15031H8.37486V0.733551C8.37495 0.329086 8.04607 0 7.6418 0H5.36597C4.9617 0 4.63281 0.329086 4.63281 0.733551V1.15031H5.41754V0.784729Z" fill="#515151"/>
+<path d="M10.1863 4.25928H2.82022C2.61838 4.25928 2.45949 4.43146 2.47576 4.6327L3.09158 12.2475C3.12589 12.6726 3.48047 13 3.90646 13H9.09993C9.52592 13 9.8805 12.6726 9.91481 12.2474L10.5306 4.6327C10.547 4.43146 10.3881 4.25928 10.1863 4.25928ZM4.60381 12.1878C4.59558 12.1883 4.58734 12.1886 4.57921 12.1886C4.37351 12.1886 4.20083 12.0284 4.18804 11.8203L3.80212 5.56898C3.78883 5.35266 3.95337 5.1665 4.16959 5.15321C4.38511 5.14011 4.57207 5.30426 4.58536 5.52068L4.97118 11.772C4.98457 11.9883 4.82002 12.1744 4.60381 12.1878ZM6.89997 11.7962C6.89997 12.0128 6.72432 12.1885 6.50761 12.1885C6.2909 12.1885 6.11524 12.0128 6.11524 11.7962V5.54478C6.11524 5.32806 6.2909 5.15241 6.50761 5.15241C6.72422 5.15241 6.89997 5.32806 6.89997 5.54478V11.7962ZM9.20437 5.56789L8.83591 11.8192C8.82371 12.0277 8.65074 12.1885 8.44464 12.1885C8.4369 12.1885 8.42906 12.1883 8.42123 12.1879C8.20491 12.1751 8.03987 11.9894 8.05267 11.7731L8.42103 5.52167C8.43373 5.30535 8.6188 5.14031 8.83571 5.15311C9.05203 5.1658 9.21707 5.35157 9.20437 5.56789Z" fill="#515151"/>
+<path d="M11.5438 3.04846L11.2861 2.27603C11.2182 2.07241 11.0276 1.93504 10.8128 1.93504H2.19499C1.98036 1.93504 1.78963 2.07241 1.72179 2.27603L1.46411 3.04846C1.41442 3.19743 1.47909 3.34938 1.59979 3.42516C1.64899 3.456 1.70721 3.47455 1.77118 3.47455H11.2367C11.3007 3.47455 11.359 3.456 11.4081 3.42506C11.5288 3.34928 11.5935 3.19733 11.5438 3.04846Z" fill="#515151"/>
+</svg>Удалить</a></div>
+          </div>
+          <ul class="events__timetable events-timetable">
+            <li class="events-timetable__row events-timetable__row--header">
+              <ul>
+                <li class="events-timetable__col">Название</li>
+                <li class="events-timetable__col">Начало</li>
+                <li class="events-timetable__col">Окончание</li>
+                <li class="events-timetable__col">Описание</li>
+              </ul>
+            </li>
+            <li class="events-timetable__row">
+              <ul>
+                <li class="events-timetable__col">У вас нет событий на этот день</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="events__navigation events-navigation">
+            <div class="events-navigation__col">
+              <div class="events-navigation__arr"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.24976 10.4999C6.2501 10.3246 6.18907 10.1548 6.07726 10.0199L2.71726 5.99987L5.95726 1.97237C6.01956 1.89565 6.06608 1.80738 6.09415 1.71262C6.12223 1.61787 6.1313 1.5185 6.12084 1.42023C6.11039 1.32196 6.08062 1.22672 6.03324 1.13999C5.98586 1.05327 5.9218 0.976757 5.84476 0.914865C5.76804 0.852565 5.67977 0.806042 5.58501 0.777968C5.49026 0.749894 5.39089 0.740824 5.29262 0.751278C5.19435 0.761733 5.09911 0.791506 5.01238 0.838886C4.92566 0.886267 4.84915 0.95032 4.78726 1.02737L1.16476 5.52737C1.05445 5.66157 0.994141 5.8299 0.994141 6.00362C0.994141 6.17733 1.05445 6.34567 1.16476 6.47987L4.91476 10.9799C4.97772 11.0558 5.05504 11.1186 5.1423 11.1646C5.22957 11.2106 5.32505 11.239 5.42328 11.248C5.52151 11.2571 5.62057 11.2467 5.71477 11.2174C5.80897 11.1881 5.89647 11.1405 5.97226 11.0774C6.05829 11.0076 6.1278 10.9196 6.17578 10.8197C6.22376 10.7199 6.24902 10.6106 6.24976 10.4999Z" fill="black"/>
+</svg>
+              </div>
+              <div class="events-navigation__current">Ноябрь 2020</div>
+              <div class="events-navigation__arr"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.750243 10.4999C0.7499 10.3246 0.810932 10.1548 0.922742 10.0199L4.28274 5.99987L1.04274 1.97237C0.980444 1.89565 0.93392 1.80738 0.905846 1.71262C0.877772 1.61787 0.868702 1.5185 0.879157 1.42023C0.889611 1.32196 0.919384 1.22672 0.966764 1.13999C1.01414 1.05327 1.0782 0.976757 1.15524 0.914865C1.23196 0.852565 1.32023 0.806042 1.41499 0.777968C1.50974 0.749894 1.60911 0.740824 1.70738 0.751278C1.80565 0.761733 1.90089 0.791506 1.98762 0.838886C2.07434 0.886267 2.15085 0.95032 2.21274 1.02737L5.83524 5.52737C5.94555 5.66157 6.00586 5.8299 6.00586 6.00362C6.00586 6.17733 5.94555 6.34567 5.83524 6.47987L2.08524 10.9799C2.02228 11.0558 1.94496 11.1186 1.8577 11.1646C1.77043 11.2106 1.67495 11.239 1.57672 11.248C1.47849 11.2571 1.37943 11.2467 1.28523 11.2174C1.19103 11.1881 1.10353 11.1405 1.02774 11.0774C0.941708 11.0076 0.872202 10.9196 0.824221 10.8197C0.77624 10.7199 0.750975 10.6106 0.750243 10.4999Z" fill="black"/>
+</svg>
+              </div>
+            </div>
+            <div class="events-navigation__col"><a class="events-navigation__item" href="#">Неделя</a><a class="events-navigation__item events-navigation__item--active" href="#">Месяц</a></div>
+          </div>
+          <div class="events__calendar events-calendar events__calendar--month">
+            <div class="events-calendar__item events-calendar-item events-calendar__item--active" data-day="1">
+              <ul class="events-calendar-item__list">
+                <li class="events-calendar-item__event">Осмотр квартиры по брони №123456</li>
+                <li class="events-calendar-item__event">Встреча с представителем КВС</li>
+                <li class="events-calendar-item__event">Созвон с клиентом</li>
+                <li class="events-calendar-item__event">Осмотр квартиры по брони №123456</li>
+                <li class="events-calendar-item__event">Встреча с представителем КВС</li>
+                <li class="events-calendar-item__event">Созвон с клиентом</li>
+              </ul>
+            </div><a class="events-calendar__item" href="#" data-day="2"></a><a class="events-calendar__item" href="#" data-day="3"></a><a class="events-calendar__item" href="#" data-day="4"></a><a class="events-calendar__item" href="#" data-day="5"></a><a class="events-calendar__item" href="#" data-day="6"></a><a class="events-calendar__item" href="#" data-day="7"></a><a class="events-calendar__item" href="#" data-day="8"></a>
+          </div>
+          <div class="events__calendar events-calendar events__calendar--week">
+            <div class="events-calendar__item events-calendar__item--active" data-day="1">
+              <ul class="events-calendar-item__list">
+                <li class="events-calendar-item__event">Осмотр квартиры по брони №123456</li>
+                <li class="events-calendar-item__event">Встреча с представителем КВС</li>
+                <li class="events-calendar-item__event">Созвон с клиентом</li>
+                <li class="events-calendar-item__event">Осмотр квартиры по брони №123456</li>
+                <li class="events-calendar-item__event">Встреча с представителем КВС</li>
+                <li class="events-calendar-item__event">Созвон с клиентом</li>
+              </ul>
+            </div><a class="events-calendar__item" href="#" data-day="2"></a><a class="events-calendar__item" href="#" data-day="3"></a><a class="events-calendar__item" href="#" data-day="4"></a><a class="events-calendar__item" href="#" data-day="5"></a><a class="events-calendar__item" href="#" data-day="6"></a><a class="events-calendar__item" href="#" data-day="7"></a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="agents__footer">
+      <div class="agents-footer__item">2020, Группа компаний «КВС»</div>
+      <div class="agents-footer__item"> <a href="#">Политика персональных данных</a></div>
+      <div class="agents-footer__item">Разработка: <a href="https://ra-studio.ru/">RA-Studio</a></div>
+    </footer>
+  </body>
+  <script src="assets/scripts/index.js"></script>
+  <script src="assets/scripts/ra-agent.js"></script>
+</html>
