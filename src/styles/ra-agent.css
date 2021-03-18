@@ -216,7 +216,7 @@ p.subtitle:not(:last-child) {
 }
 .agents-stafflist__col {
 	box-sizing: border-box;
-	padding: 0 20px;
+	padding: 0 10px;
 	flex-shrink: 0;
 }
 .agents-stafflist__col:nth-child(1) {
@@ -255,21 +255,27 @@ p.subtitle:not(:last-child) {
 	flex: 0 0 75px;
 }
 .deals .agents-stafflist__col:nth-child(1) {
-	flex: 0 0 12%;
+	flex: 0 0 9%;
 }
 .deals .agents-stafflist__col:nth-child(2) {
-	flex: 0 0 12%;
+	flex: 0 0 8%;
 }
 .deals .agents-stafflist__col:nth-child(3) {
-	flex: 0 0 24%;
+	flex: 0 0 20%;
 }
 .deals .agents-stafflist__col:nth-child(4) {
-	flex: 0 0 24%;
+	flex: 0 0 9%;
 }
 .deals .agents-stafflist__col:nth-child(5) {
-	flex: 1;
+	flex: 0 0 16%;
 }
 .deals .agents-stafflist__col:nth-child(6) {
+	flex: 0 0 12%;
+}
+.deals .agents-stafflist__col:nth-child(7) {
+	flex: 1;
+}
+.deals .agents-stafflist__col:nth-child(8) {
 	flex: 0 0 75px;
 }
 .agents-stafflist__col:last-child svg {
@@ -1638,4 +1644,47 @@ html > body > div.lightbox:not(.bottom-block) > div.wrapper > div.content > form
 	color: #000000;
 	margin-left: 20px;
 	width: 200px;
+}
+
+/* ra_header-notice */
+.ra_header-notice {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.015em;
+	color: #232930;
+	display: block;
+	position: relative;
+	align-self: center;
+	margin-right: 20px;
+}
+.ra_header-notice:hover {
+	color: #969ba0;
+}
+
+.ra_header-notice__number {
+	padding: 2px;
+	font-weight: 600;
+	font-size: 8px;
+	line-height: 8px;
+	letter-spacing: 0.015em;
+	color: #ffffff;
+	background: #f4691b;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: -5px;
+	right: -10px;
+	border-radius: 40px;
+	min-height: 12px;
+	min-width: 12px;
+}
+
+html > body > main > div > section.slider-promo > form.chooser-form > ul.fields > li[data-for="rooms"] {
+	width: 17.7%;
+}
+
+html > body > main > div > section.slider-promo > form.chooser-form > ul.fields > li[data-for="price"] {
+	width: 21.85%;
 }

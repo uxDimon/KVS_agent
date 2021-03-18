@@ -9,6 +9,13 @@ block content
             section.header-with-caption
                 h1 Объекты
                 p.subtitle Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+                .submenu
+                    ul
+                        li
+                            a.current(href="#") Квартиры
+                        li
+                            a(href="#") Коммерция
+
         <div class="stream-wide">
             <section class="chooser apartments">
                 <input type="checkbox" name="additional_parameters" id="additional_parameters">
@@ -322,7 +329,28 @@ block content
                             </button>
                             <button class="btn-orange reserve" type="submit">Зарезервировать</button>
                         
-                        <div class="card"> 
+                        <div class="card">
+                            <ul class="actions">
+                                <li>
+                                    <a class="pdf" href="/pdf.php?idunion=8&amp;name=%D0%96%D0%9A+%C2%AB%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5+%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%C2%BB&amp;price=4038720&amp;rooms=1&amp;aa=33.6&amp;deadline=2+%D0%BA%D0%B2.+2023+%D0%B3.&amp;date=2+%D0%BA%D0%B2.+2023%D0%B3.+&amp;corp=%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81+3&amp;pod=%D0%9F%D0%BE%D0%B4%D1%8A%D0%B5%D0%B7%D0%B4+11&amp;al=12.7&amp;ak=12.4&amp;at=0&amp;floor=3&amp;maxfl=4&amp;img1=%2Fupload%2Fplacement%2Fplanflat%2Fns-im3k_11_3_2_33-6.svg&amp;img2=%2Fupload%2Fplacement%2Fplancorpus%2Fns-im3k_11_3_2_33-6_p.svg&amp;balcony=1.5&amp;obNumb=209&amp;fin=%D0%A1+%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%BE%D0%B9&amp;inkithc=&amp;jk=%2Fobekty%2Fsertolovo%2F&amp;type=9" target="_blank" >Cкачать PDF</a>
+                                </li>
+                                <li><button class="print" type="button" onclick="window.print();">Распечатать</button></li>
+                                <li>
+                                    <div class="share">
+                                        <span>Поделиться</span>
+                                        <div class="likely">
+                                            <div class="vkontakte" aria-label="Поделиться Вконтакте"></div>
+                                            <div class="facebook" aria-label="Поделиться в Фейсбуке"></div>
+                                            <div class="whatsapp" aria-label="Поделиться в Вотсаппе"></div>
+                                            <div class="share-link" aria-label="Скопировать ссылку"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>                            
+                            <div class="card-slider-wrapper slider-wrapper">
+                                <img class="ra_card-img" src="assets/images/ns-im3k_11_3_2_33-6.svg" alt="Планировка квартиры № 209" title="Планировка квартиры № 209" />
+                                <a href="#lightbox/apartment/zoom" class="zoom" aria-label="Увеличить планировку"></a>
+                            </div>
                             <div class="info">
                                 <h1>1-комнатная, 33.6 м²</h1>
                                 <ul class="features">
@@ -347,27 +375,6 @@ block content
                                 <button class="btn-orange" type="button" add-to-cart="125932">Зарезервировать</button>
                                 <button class="btn-orange" type="button" add-to-cart="125932">Запись на показ</button>
                             </div>
-                            <div class="card-slider-wrapper slider-wrapper">
-                                <img class="ra_card-img" src="assets/images/ns-im3k_11_3_2_33-6.svg" alt="Планировка квартиры № 209" title="Планировка квартиры № 209" />
-                                <a href="#lightbox/apartment/zoom" class="zoom" aria-label="Увеличить планировку"></a>
-                            </div>
-                            <ul class="actions">
-                                <li>
-                                    <a class="pdf" href="/pdf.php?idunion=8&amp;name=%D0%96%D0%9A+%C2%AB%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5+%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%C2%BB&amp;price=4038720&amp;rooms=1&amp;aa=33.6&amp;deadline=2+%D0%BA%D0%B2.+2023+%D0%B3.&amp;date=2+%D0%BA%D0%B2.+2023%D0%B3.+&amp;corp=%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81+3&amp;pod=%D0%9F%D0%BE%D0%B4%D1%8A%D0%B5%D0%B7%D0%B4+11&amp;al=12.7&amp;ak=12.4&amp;at=0&amp;floor=3&amp;maxfl=4&amp;img1=%2Fupload%2Fplacement%2Fplanflat%2Fns-im3k_11_3_2_33-6.svg&amp;img2=%2Fupload%2Fplacement%2Fplancorpus%2Fns-im3k_11_3_2_33-6_p.svg&amp;balcony=1.5&amp;obNumb=209&amp;fin=%D0%A1+%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%BE%D0%B9&amp;inkithc=&amp;jk=%2Fobekty%2Fsertolovo%2F&amp;type=9" target="_blank" >Cкачать PDF</a>
-                                </li>
-                                <li><button class="print" type="button" onclick="window.print();">Распечатать</button></li>
-                                <li>
-                                    <div class="share">
-                                        <span>Поделиться</span>
-                                        <div class="likely">
-                                            <div class="vkontakte" aria-label="Поделиться Вконтакте"></div>
-                                            <div class="facebook" aria-label="Поделиться в Фейсбуке"></div>
-                                            <div class="whatsapp" aria-label="Поделиться в Вотсаппе"></div>
-                                            <div class="share-link" aria-label="Скопировать ссылку"></div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
                     </li>
                     <li class="ra_apartments-item">
@@ -413,7 +420,28 @@ block content
                             </button>
                             <button class="btn-orange reserve" type="submit">Зарезервировать</button>
                         
-                        <div class="card"> 
+                        <div class="card">
+                            <ul class="actions">
+                                <li>
+                                    <a class="pdf" href="/pdf.php?idunion=8&amp;name=%D0%96%D0%9A+%C2%AB%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5+%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%C2%BB&amp;price=4038720&amp;rooms=1&amp;aa=33.6&amp;deadline=2+%D0%BA%D0%B2.+2023+%D0%B3.&amp;date=2+%D0%BA%D0%B2.+2023%D0%B3.+&amp;corp=%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81+3&amp;pod=%D0%9F%D0%BE%D0%B4%D1%8A%D0%B5%D0%B7%D0%B4+11&amp;al=12.7&amp;ak=12.4&amp;at=0&amp;floor=3&amp;maxfl=4&amp;img1=%2Fupload%2Fplacement%2Fplanflat%2Fns-im3k_11_3_2_33-6.svg&amp;img2=%2Fupload%2Fplacement%2Fplancorpus%2Fns-im3k_11_3_2_33-6_p.svg&amp;balcony=1.5&amp;obNumb=209&amp;fin=%D0%A1+%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%BE%D0%B9&amp;inkithc=&amp;jk=%2Fobekty%2Fsertolovo%2F&amp;type=9" target="_blank" >Cкачать PDF</a>
+                                </li>
+                                <li><button class="print" type="button" onclick="window.print();">Распечатать</button></li>
+                                <li>
+                                    <div class="share">
+                                        <span>Поделиться</span>
+                                        <div class="likely">
+                                            <div class="vkontakte" aria-label="Поделиться Вконтакте"></div>
+                                            <div class="facebook" aria-label="Поделиться в Фейсбуке"></div>
+                                            <div class="whatsapp" aria-label="Поделиться в Вотсаппе"></div>
+                                            <div class="share-link" aria-label="Скопировать ссылку"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>                            
+                            <div class="card-slider-wrapper slider-wrapper">
+                                <img class="ra_card-img" src="assets/images/ns-im3k_11_3_2_33-6.svg" alt="Планировка квартиры № 209" title="Планировка квартиры № 209" />
+                                <a href="#lightbox/apartment/zoom" class="zoom" aria-label="Увеличить планировку"></a>
+                            </div>
                             <div class="info">
                                 <h1>1-комнатная, 33.6 м²</h1>
                                 <ul class="features">
@@ -438,27 +466,6 @@ block content
                                 <button class="btn-orange" type="button" add-to-cart="125932">Зарезервировать</button>
                                 <button class="btn-orange" type="button" add-to-cart="125932">Запись на показ</button>
                             </div>
-                            <div class="card-slider-wrapper slider-wrapper">
-                                <img class="ra_card-img" src="assets/images/ns-im3k_11_3_2_33-6.svg" alt="Планировка квартиры № 209" title="Планировка квартиры № 209" />
-                                <a href="#lightbox/apartment/zoom" class="zoom" aria-label="Увеличить планировку"></a>
-                            </div>
-                            <ul class="actions">
-                                <li>
-                                    <a class="pdf" href="/pdf.php?idunion=8&amp;name=%D0%96%D0%9A+%C2%AB%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5+%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%C2%BB&amp;price=4038720&amp;rooms=1&amp;aa=33.6&amp;deadline=2+%D0%BA%D0%B2.+2023+%D0%B3.&amp;date=2+%D0%BA%D0%B2.+2023%D0%B3.+&amp;corp=%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81+3&amp;pod=%D0%9F%D0%BE%D0%B4%D1%8A%D0%B5%D0%B7%D0%B4+11&amp;al=12.7&amp;ak=12.4&amp;at=0&amp;floor=3&amp;maxfl=4&amp;img1=%2Fupload%2Fplacement%2Fplanflat%2Fns-im3k_11_3_2_33-6.svg&amp;img2=%2Fupload%2Fplacement%2Fplancorpus%2Fns-im3k_11_3_2_33-6_p.svg&amp;balcony=1.5&amp;obNumb=209&amp;fin=%D0%A1+%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%BE%D0%B9&amp;inkithc=&amp;jk=%2Fobekty%2Fsertolovo%2F&amp;type=9" target="_blank" >Cкачать PDF</a>
-                                </li>
-                                <li><button class="print" type="button" onclick="window.print();">Распечатать</button></li>
-                                <li>
-                                    <div class="share">
-                                        <span>Поделиться</span>
-                                        <div class="likely">
-                                            <div class="vkontakte" aria-label="Поделиться Вконтакте"></div>
-                                            <div class="facebook" aria-label="Поделиться в Фейсбуке"></div>
-                                            <div class="whatsapp" aria-label="Поделиться в Вотсаппе"></div>
-                                            <div class="share-link" aria-label="Скопировать ссылку"></div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
                     </li>
                     <li class="ra_apartments-item">
@@ -504,7 +511,28 @@ block content
                             </button>
                             <button class="btn-orange reserve" type="submit">Зарезервировать</button>
                         
-                        <div class="card"> 
+                        <div class="card">
+                            <ul class="actions">
+                                <li>
+                                    <a class="pdf" href="/pdf.php?idunion=8&amp;name=%D0%96%D0%9A+%C2%AB%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5+%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%C2%BB&amp;price=4038720&amp;rooms=1&amp;aa=33.6&amp;deadline=2+%D0%BA%D0%B2.+2023+%D0%B3.&amp;date=2+%D0%BA%D0%B2.+2023%D0%B3.+&amp;corp=%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81+3&amp;pod=%D0%9F%D0%BE%D0%B4%D1%8A%D0%B5%D0%B7%D0%B4+11&amp;al=12.7&amp;ak=12.4&amp;at=0&amp;floor=3&amp;maxfl=4&amp;img1=%2Fupload%2Fplacement%2Fplanflat%2Fns-im3k_11_3_2_33-6.svg&amp;img2=%2Fupload%2Fplacement%2Fplancorpus%2Fns-im3k_11_3_2_33-6_p.svg&amp;balcony=1.5&amp;obNumb=209&amp;fin=%D0%A1+%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%BE%D0%B9&amp;inkithc=&amp;jk=%2Fobekty%2Fsertolovo%2F&amp;type=9" target="_blank" >Cкачать PDF</a>
+                                </li>
+                                <li><button class="print" type="button" onclick="window.print();">Распечатать</button></li>
+                                <li>
+                                    <div class="share">
+                                        <span>Поделиться</span>
+                                        <div class="likely">
+                                            <div class="vkontakte" aria-label="Поделиться Вконтакте"></div>
+                                            <div class="facebook" aria-label="Поделиться в Фейсбуке"></div>
+                                            <div class="whatsapp" aria-label="Поделиться в Вотсаппе"></div>
+                                            <div class="share-link" aria-label="Скопировать ссылку"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>                            
+                            <div class="card-slider-wrapper slider-wrapper">
+                                <img class="ra_card-img" src="assets/images/ns-im3k_11_3_2_33-6.svg" alt="Планировка квартиры № 209" title="Планировка квартиры № 209" />
+                                <a href="#lightbox/apartment/zoom" class="zoom" aria-label="Увеличить планировку"></a>
+                            </div>
                             <div class="info">
                                 <h1>1-комнатная, 33.6 м²</h1>
                                 <ul class="features">
@@ -529,27 +557,6 @@ block content
                                 <button class="btn-orange" type="button" add-to-cart="125932">Зарезервировать</button>
                                 <button class="btn-orange" type="button" add-to-cart="125932">Запись на показ</button>
                             </div>
-                            <div class="card-slider-wrapper slider-wrapper">
-                                <img class="ra_card-img" src="assets/images/ns-im3k_11_3_2_33-6.svg" alt="Планировка квартиры № 209" title="Планировка квартиры № 209" />
-                                <a href="#lightbox/apartment/zoom" class="zoom" aria-label="Увеличить планировку"></a>
-                            </div>
-                            <ul class="actions">
-                                <li>
-                                    <a class="pdf" href="/pdf.php?idunion=8&amp;name=%D0%96%D0%9A+%C2%AB%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5+%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%C2%BB&amp;price=4038720&amp;rooms=1&amp;aa=33.6&amp;deadline=2+%D0%BA%D0%B2.+2023+%D0%B3.&amp;date=2+%D0%BA%D0%B2.+2023%D0%B3.+&amp;corp=%D0%9A%D0%BE%D1%80%D0%BF%D1%83%D1%81+3&amp;pod=%D0%9F%D0%BE%D0%B4%D1%8A%D0%B5%D0%B7%D0%B4+11&amp;al=12.7&amp;ak=12.4&amp;at=0&amp;floor=3&amp;maxfl=4&amp;img1=%2Fupload%2Fplacement%2Fplanflat%2Fns-im3k_11_3_2_33-6.svg&amp;img2=%2Fupload%2Fplacement%2Fplancorpus%2Fns-im3k_11_3_2_33-6_p.svg&amp;balcony=1.5&amp;obNumb=209&amp;fin=%D0%A1+%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%BE%D0%B9&amp;inkithc=&amp;jk=%2Fobekty%2Fsertolovo%2F&amp;type=9" target="_blank" >Cкачать PDF</a>
-                                </li>
-                                <li><button class="print" type="button" onclick="window.print();">Распечатать</button></li>
-                                <li>
-                                    <div class="share">
-                                        <span>Поделиться</span>
-                                        <div class="likely">
-                                            <div class="vkontakte" aria-label="Поделиться Вконтакте"></div>
-                                            <div class="facebook" aria-label="Поделиться в Фейсбуке"></div>
-                                            <div class="whatsapp" aria-label="Поделиться в Вотсаппе"></div>
-                                            <div class="share-link" aria-label="Скопировать ссылку"></div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
                     </li>
                     <li class="more"><button type="button">Показать еще 20 квартир из 617</button></li>                    
