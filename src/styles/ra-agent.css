@@ -1688,3 +1688,19 @@ html > body > main > div > section.slider-promo > form.chooser-form > ul.fields 
 html > body > main > div > section.slider-promo > form.chooser-form > ul.fields > li[data-for="price"] {
 	width: 21.85%;
 }
+
+html > body > main > div.stream-wide.ra_stream-wide {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+html > body > main > div.stream-wide.ra_stream-wide > .title {
+	width: 70%;
+}
+
+html > body > header + main > div.stream-wide.ra_stream-wide > section.slider-promo {
+	margin-top: 0;
+	width: 100%;
+}

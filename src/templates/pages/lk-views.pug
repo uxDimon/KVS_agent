@@ -16,14 +16,25 @@ block content
                         li
                             a(href="lk-staff.html") Сотрудники
                         li
+                            a(href="#") Рейтинги
+                        li
                             a(href="lk-notices.html") Уведомления
+                        li
+                            a(href="#") Выплаты
                         li
                             a(href="lk-events.html") Календарь мероприятий
                         li
-                            a.current(href="lk-views.html") Показы
+                            a.current(href="lk-views.html") Показы   
         .stream-wide
             section.main-text
                 h2.title Показы
+            a.agents__add.agents-add(href="#")
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="25" fill="#F4691B"/>
+                    <path d="M17.7 25.192V22.888H24.36V16.12H26.88V22.888H33.54V25.192H26.88V31.96H24.36V25.192H17.7Z" fill="white"/>
+                </svg>
+                | Записать на показ
+
             form.agents__filterstaff.form.ajax-form(enctype="multipart/form-data" method="POST" action autocomplete="on" novalidate="novalidate")
                 ul.fields.ra_form-grid-5
                     li.ra_form-grid__item1

@@ -36,8 +36,10 @@ block content
                             li.error Заполните поле
                     li
                         button.btn-orange(type="submit") Отправить заявку 
-        .stream-wide 
+        .stream-wide.ra_stream-wide
             h2.title Поиск объекта по параметрам
+            <input class="toggle" type="checkbox" name="mapRatest" id="mapRatest">
+            <label class="toggle" for="mapRatest">Показать на карте</label>            
             section.slider-promo
                 <form class="chooser-form ra_chooser-form" id="chooser-form" name="_form" action="/search/" method="get">
                     <ul class="fields">
