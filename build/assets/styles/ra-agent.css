@@ -1704,3 +1704,77 @@ html > body > header + main > div.stream-wide.ra_stream-wide > section.slider-pr
 	margin-top: 0;
 	width: 100%;
 }
+
+/* START ra_apart-list */
+.ra_apart-list {
+	display: grid;
+	grid-gap: 15px;
+}
+
+.ra_apart-list__item {
+	border: 1px solid #dcdfe1;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding: 10px 30px 10px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ra_apart-list__img {
+	width: 90px;
+	height: 90px;
+	margin-right: 20px;
+	object-fit: contain;
+}
+
+.ra_apart-list__floor,
+.ra_apart-list__name-wrap {
+	margin-right: 20px;
+}
+
+.ra_apart-list__name {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 1.2;
+	margin-bottom: 8px;
+	color: #000000;
+}
+
+.ra_apart-list__object {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.2;
+	margin-bottom: 8px;
+	color: #292f36;
+}
+
+.ra_apart-list__release {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #68717b;
+}
+
+.ra_apart-list__floor-number {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.2;
+	color: #292f36;
+}
+
+.ra_apart-list__floor-text {
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: 0.015em;
+	color: #68717b;
+}
+
+.ra_apart-list__price {
+	font-weight: bold;
+	font-size: 20px;
+	color: #f4691b;
+	margin-right: 20px;
+}
+
+/* END ra_apart-list */
